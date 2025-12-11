@@ -1,3 +1,8 @@
+---
+title: "Sigma"
+layout: default
+theme: jekyll-theme-cayman
+
 # SIGMA
 testing edit in main
 ### A modernized take on the Enigma Machine used in WWII to encrypt messages.
