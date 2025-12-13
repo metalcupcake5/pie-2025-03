@@ -1,9 +1,36 @@
 body, html {
-  overflow: hidden; /* Hide both horizontal and vertical scrollbars */
+    overflow: hidden;
   height: 100%;    /* Ensure the body and html take up the full viewport height */
   margin: 0;       /* Remove default browser margins */
   padding: 0;      /* Remove default browser padding */
+  font-family:'Source Sans 3', sans-serif;
+background-color: rgb(67, 170, 222);
 }
-#main_video{
-    
+h1 {
+    display: block;
+    text-align: center;
+
+}
+iframe{
+    display:block;
+    margin:auto;
+    grid-area: video;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    font-size:xx-small;
+    grid-area: buttons;
+}
+
+#grid{
+display: grid;
+grid-template-areas: "buttons video";
+  gap: 20px;
+  align-items: start;
 }
