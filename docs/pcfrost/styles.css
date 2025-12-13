@@ -3,7 +3,6 @@ html{
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     font-family: 'Source Sans 3', sans-serif;
 }
 
@@ -31,6 +30,7 @@ h1 {
 #main-body{
     background: linear-gradient(135deg, #7ce03a, #b65bf7);
     color: #ffffff;
+    overflow:hidden;
 }
 
 /* Grid layout (unchanged structure) */
@@ -100,12 +100,14 @@ table {
     background: white;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+
 }
 
 
 table th {
     background: #3aa8e0;
-    color: white;
+    color: rgba(11, 0, 0, 100);
     padding: 12px;
     text-align: left;
     font-size: 1.1rem;
@@ -119,4 +121,9 @@ table td {
 
 table tr:hover {
     background: #f2f9ff;
+}
+
+#bom-body {
+    background: linear-gradient(90deg, #990707, #782bc1);
+    overflow: scroll;
 }
