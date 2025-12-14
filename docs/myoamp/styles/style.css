@@ -1,7 +1,7 @@
 html {
   font-size: 50px;
   font-family:  "Karla", sans-serif;
-  background-color: #f3b094;
+  background-color: #f1f4fe;
 }
 
 h1 {
@@ -33,22 +33,31 @@ li {
 }
 
 
-main {
-  width: fit-content;
-  height: fit-content;
-  margin: 0 auto;
-  background-color: #fed3c0;
-  padding: 0 20px 20px 20px; 
-  border: 5px solid black;
-  margin-top: 0px;
-  border-radius: 5px;
+.intro {
+  margin: 50px 0;
+  text-align: right;
 }
 
+.intro h1{
+  margin: 10px auto 50px 700px;
+}
+
+.intro h2{
+  text-align: right;
+}
+
+.intro p{
+  color: rgb(0, 0, 0);
+  width: auto;
+  max-width: 650px;
+  margin: -375px 0 0 800px;
+  font-size: 25px;
+}
 
 .system-diagrams {
   width: fit-content;
-  margin: 100px auto 100px auto;
-  background-color: #fed3c0;
+  margin: 200px auto 100px auto;
+  background-color: #f4e8e2;
   padding: 20px 20px 20px 20px; /*top, right, bottom, left */
   border: 5px solid black;
   justify-content: center;   /* vertical centering */
@@ -61,7 +70,7 @@ main {
 .overview {
   width: fit-content;
   margin: 100px auto 100px auto;
-  background-color: #fed3c0;
+  background-color: #f4e8e2;
   padding: 20px 20px 20px 20px;
   border: 5px solid black;
   justify-content: center;   
@@ -85,6 +94,20 @@ img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
+}
+
+
+.rotate-45 {
+  transform: rotate(-45deg);
+  width: 600px;      
+  height: auto;      /* maintains aspect ratio */
+}
+
+/* sliding animation */
+.slide-up {
+  transform: rotate(-45deg) translateX(-100vw) translateY(10vh); /* start off-screen bottom-left */
+  opacity: 0;
+  transition: transform 2s ease-out, opacity 2s ease-out;
 }
 
 
@@ -134,7 +157,7 @@ p {
 }
 
 .info-box:hover {
-  background-color: #f4c1ab;
+  background-color: #f4e8e2;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -160,13 +183,13 @@ p {
 }
 
 .nav a:hover {
-  background: #f4c1ab;
+  background: #ffe4d8;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .components:hover {
-  background-color: #f4c1ab;
+  background-color: #ffe4d8;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -178,7 +201,7 @@ p {
   padding: 5px;
   margin: 10px;
   text-align: left;
-  background: #fed3c0;
+  background: #f4e8e2;
   width: 680px;
 }
 
@@ -199,7 +222,7 @@ p {
   opacity: 1;
   transform: translateY(0px);
   pointer-events: auto;
-  background: #f4c1ab;
+  background: #ffe4d8;
   border-radius: 10px;
   cursor: pointer;
   width: 79px;
@@ -208,7 +231,7 @@ p {
 
 .dropdown-menu li a {
   display: block;
-  background: #fed3c0;
+  background: #f4e8e2;
   padding: 10px 20px;
   text-decoration: none;
   color: black;
@@ -216,6 +239,6 @@ p {
 }
 
 .dropdown-menu li a:hover {
-  background-color: #f4c1ab;  /* change color on hover */
+  background-color: #ffe4d8;  
   cursor: pointer;
 }

@@ -12,3 +12,12 @@ myImage.addEventListener("click", () => {
 let myButton = document.querySelector("button");
 let myHeading = document.querySelector("h1");
 
+window.addEventListener('load', () => {
+  const img = document.querySelector('.slide-up');
+  img.style.transform = 'rotate(-45deg) translateX(-450px) translateY(-450px)'; // final position
+  img.style.opacity = '1';
+});
+
+
+
+
