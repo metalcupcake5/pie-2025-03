@@ -108,6 +108,15 @@ li {
   margin: 0;
 }
 
+.flow-img:not(.enlarged) {
+  cursor: pointer;
+}
+
+.flow-img.enlarged {
+  cursor: default; 
+}
+
+
 
 .overview {
   width: fit-content;
@@ -293,4 +302,60 @@ p {
 .dropdown-menu li a:hover {
   background-color: #ffe4d8;  
   cursor: pointer;
+}
+
+.top-pics h2{
+  font-size: 100px;
+  margin-top: 50px;
+}
+
+.topleft{
+  margin: 0px 700px 0 25px;
+  position: relative;
+}
+
+.topright{
+  margin: -335px 0px 0 900px;
+  position: absolute;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;      /* centers table */
+  margin-top: -200px;
+}
+
+th {
+  text-align: left;
+  padding: 80px;
+  font-size: 30px;
+  border-bottom: 1px solid black; /* horizontal lines */
+  border-right: 1px solid black;  /* vertical lines */
+}
+
+td {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  
+  border-bottom: 1px solid black; /* horizontal lines */
+  border-right: 1px solid black;  /* vertical lines */
+}
+
+/* Remove the right border on the last column */
+tr th:last-child,
+tr td:last-child {
+  border-right: none;
+}
+
+/* Remove the bottom border on the last row */
+tr:last-child th,
+tr:last-child td {
+  border-bottom: none;
+}
+
+.bottom{
+  margin: -300px 900px 0 -230px;
+  width: 500px;
+  height: auto;
 }

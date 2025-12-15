@@ -14,10 +14,16 @@ window.addEventListener('load', () => {
   const img = document.querySelector(".flow-img");
   if (!img) return;
 
-  img.addEventListener("click", () => {
+  img.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent background click
     img.classList.toggle("enlarged");
   });
+
+  document.addEventListener("click", () => {
+    img.classList.remove("enlarged");
+  });
 });
+
 
 
 
