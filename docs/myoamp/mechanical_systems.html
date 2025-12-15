@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <link href="styles/style.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>MyoAmp | Mechanical System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- ================= NAV BAR ================= -->
+    <section class="nav-bar">
+      <nav>
+        <ul class="nav">
+          <a href="index.html">Home</a>
+          <li class="dropdown">
+            <a href="#"> Systems </a>
+            <ul class="dropdown-menu">
+              <li><a href="systems.html#mechanical" class="components"> Mechanical </a></li>
+              <li><a href="systems.html#electrical" class="components"> Electrical </a></li>
+              <li><a href="systems.html#firmware" class="components"> Firmware </a></li>
+              <li><a href="systems.html#software" class="components"> Software </a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#"> Sprints </a>
+            <ul class="dropdown-menu">
+              <li><a href="sprints.html#sprint1" class="components"> Sprint 1 </a></li>
+              <li><a href="sprints.html#sprint2" class="components"> Sprint 2 </a></li>
+              <li><a href="sprints.html#sprint3" class="components"> Sprint 3 </a></li>
+            </ul>
+          </li>
+          <a href="billofmaterials.html">Bill of Materials</a>
+          <a href="aboutus.html">About Us</a>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- ================= INTRO ================= -->
+    <section class="intro">
+      <h2>System Breakdown</h2>
+      <h1>Mechanical Design</h1>
+      <img class="rotate-45 slide-up" src="images/reach-removebg-preview.png" alt="prosthetic hand" />
+      <p>
+        The mechanical system of MyoAmp translates electrical muscle signals into controlled, repeatable hand motion.
+        The design prioritizes modularity, durability, and user comfort while enabling multiple functional grips.
+      </p>
+    </section>
+
+    <!-- ================= OVERVIEW ================= -->
+    <section class="overview" id="mechanical">
+      <h3>Mechanical Overview</h3>
+      <p>
+        The mechanical subsystem consists of a 3D-printed hand frame, tendon-driven fingers, and linear actuators.
+        Each actuator independently controls a finger group, allowing the device to switch between three distinct grip modes.
+        Structural components were designed to be lightweight while maintaining sufficient strength for daily-use tasks.
+      </p>
+    </section>
+
+    <!-- ================= SUBSYSTEMS ================= -->
+    <section class="system-diagrams">
+      <h3>Key Mechanical Components</h3>
+      <p>
+        The following elements form the backbone of the mechanical system and directly influence performance,
+        reliability, and ease of assembly.
+      </p>
+    </section>
+
+    <section class="timeline">
+      <div class="info-box">
+        <p class="title">Hand Frame</p>
+        <p class="more">
+          A 3D-printed skeletal structure that supports all moving components. The frame was optimized
+          for weight reduction while maintaining stiffness under load.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <p class="title">Linear Actuators</p>
+        <p class="more">
+          Small linear actuators convert electrical input into linear motion. These actuators pull tendons
+          to flex the fingers and release to allow extension.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <p class="title">Tendon System</p>
+        <p class="more">
+          High-strength string is routed through the fingers to mimic biological tendons. This approach
+          simplifies actuation and enables smoother, more natural motion.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= GRIPS ================= -->
+    <section class="overview">
+      <h3>Grip Modes</h3>
+      <p>
+        The mechanical design supports three grip configurations, each optimized for common daily tasks.
+        Grip selection is controlled electronically, while execution is handled entirely by the mechanical system.
+      </p>
+
+      <ul class="nav">
+        <li>Power Grip – for grasping larger objects</li>
+        <li>Pinch Grip – for precision tasks</li>
+        <li>Point Grip – for interaction and indication</li>
+      </ul>
+    </section>
+
+    <!-- ================= CAD & ITERATION ================= -->
+    <section class="system-diagrams">
+      <h3>Design Iteration & CAD</h3>
+      <p>
+        Multiple CAD iterations were created to refine finger articulation, actuator placement,
+        and overall ergonomics. Rapid prototyping allowed the team to quickly test mechanical assumptions
+        and incorporate feedback into subsequent designs.
+      </p>
+    </section>
+
+    <!-- ================= NAVIGATION ================= -->
+    <section class="overview">
+      <h3>Explore Other Systems</h3>
+      <a href="systems.html#electrical" class="components">Electrical</a>
+      <a href="systems.html#firmware" class="components">Firmware</a>
+      <a href="systems.html#software" class="components">Software</a>
+    </section>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
