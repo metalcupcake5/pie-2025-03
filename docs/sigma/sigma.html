@@ -52,8 +52,19 @@
       font-style: italic;
       color: #5a4b34;
       margin: 20px 0;
-      object-fit: contain;
     }
+
+    .image-container {
+    width: 100%;
+    height: 250px;
+    border: 2px dashed #8b6e46;
+    }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
     footer {
       text-align: center;
@@ -118,7 +129,7 @@
       The original idea was to use a small length of solder wick because it was conductive and flexible. However, since solder wick oxidizes so quickly, it might become unreliable, which led us to look for more reliable solutions. To make the connection, we soldered wires onto small pins we found in the Shop that fit perfectly onto the tabs. A small piece of the same copper wire we used for the rotors is glued onto a little stand and soldered to a wire that connects to the breadboard. In the resting position, the pins do not touch the copper, and when a slight bit of pressure is applied, they touch and the circuit is complete.
       <br><br>
       A tradeoff to making the keyboard as opposed to using a standard keyboard is time and redundancy. Since keys are made using springs and many small parts, each key is essentially a small mechanism, requiring hours of soldering. Since there are 26 letters in the alphabet, this creates long-repetitive tasks for the assembly of dozens of parts.
-      <div class="placeholder">
+      <div class="img-container">
         <img src="images/key_prototype.JPG" alt="Key prototype">
       </div>
       <br><br>
