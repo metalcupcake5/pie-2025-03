@@ -359,3 +359,23 @@ tr:last-child td {
   width: 500px;
   height: auto;
 }
+
+.total{
+  width: fit-content;
+  margin: 0px 0px 100px 1200px;
+  background-color: #f4e8e2;
+  padding: 20px 20px 20px 20px;
+  border: 5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+}
+.extra{
+  margin: 0 0 0px 1200px;
+}
+
+.extra p{
+  font-size: 15px;
+  margin: -85px 0 100px 50px;
+}
