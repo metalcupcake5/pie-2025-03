@@ -545,3 +545,103 @@ video {
   transform: translateX(-350px) translateY(-800px);
   margin-bottom: -500px;
 }
+
+.first {
+  text-align: right;
+  margin-left: 600px;
+  margin-top: 0px;
+}
+
+@keyframes spin{
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.gear1{
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 50px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: normal;
+}
+.gear2{
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 90px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: reverse;
+}
+.gear3{
+  position: absolute;
+  margin-top: 105px;
+  margin-left: 175px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: normal;
+}
+.gear4{
+  position: absolute;
+  margin-top: 75px;
+  margin-left: 240px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: reverse;
+}
+.gear5{
+  position: absolute;
+  margin-top: 90px;
+  margin-left: 282px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: normal;
+}
+.gear6{
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 350px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: reverse;
+}
+.gear7{
+  position: absolute;
+  margin-top: 155px;
+  margin-left: 400px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: normal;
+}
+.gear9{
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 450px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: reverse;
+}
+.gear10{
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 265px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: normal;
+}
+.geartop{
+  position: absolute;
+  margin-top: 77px;
+  margin-left: 122px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: normal;
+}
+.geardown{
+  position: absolute;
+  margin-top: 176px;
+  margin-left: 70px;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+  animation-direction: normal;
+}
