@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
   if (!img) return;
 
   img.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent background click
+    e.stopPropagation(); // prevent background click fancy shmancy way
     img.classList.toggle("enlarged");
   });
 
@@ -25,9 +25,38 @@ window.addEventListener('load', () => {
 });
 
 
+  const slides = [
+    {
+      img: "Images/tada2.png",
+      text: "This is the first image description."
+    },
+    {
+      img: "Images/wifi.png",
+      text: "This text appears with the second image."
+    },
+    {
+      img: "Images/reach.jpg",
+      text: "Here is some context for the third image."
+    }
+  ];
 
+  let index = 0;
+  const slideImg = document.getElementById("slide");
+  const caption = document.getElementById("caption");
 
+  function update() {
+    slideImg.src = slides[index].img;
+    caption.textContent = slides[index].text;
+  }
 
+  function next() {
+    index = (index + 1) % slides.length;
+    update();
+  }
 
+  function prev() {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  }
 
-
+  update();

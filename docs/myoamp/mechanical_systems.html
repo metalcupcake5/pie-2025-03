@@ -53,7 +53,6 @@
     <!-- ================= INTRO ================= -->
     <section class="first">
       <h1>Mechanical Design</h1>
-      
       <p>
         The mechanical system of MyoAmp translates electrical muscle signals into controlled, repeatable hand motion.
         The design prioritizes modularity, durability, and user comfort while enabling multiple functional grips.
@@ -61,16 +60,23 @@
     </section>
 
     <!-- ================= OVERVIEW ================= -->
-    <section class="overview" id="mechanical">
-      <h3>Mechanical Overview</h3>
+    <section class="mech-overview" id="mechanical">
+      <h3>Overview</h3>
       <p>
-        The mechanical subsystem consists of a 3D-printed hand frame, tendon-driven fingers, and linear actuators.
-        Each actuator independently controls a finger group, allowing the device to switch between three distinct grip modes.
-        Structural components were designed to be lightweight while maintaining sufficient strength for daily-use tasks.
+        The goal of the mechanical system of MyoAmp was to create the actual orthotic system to integrate electrical parts onto the users. 
+        This was done in a few parts: integrating boards and power electronics (bicep mount and battery mount), integrating driving system 
+        (forearm and wrist mount), and integrating onto hand (finger mounts). We wanted to create an orthotic system that could easily be 
+        fit to users dimensions and needs, as well as create a system that could successfully counteract cable drive with minimal 
+        interference and discomfort.
       </p>
+      <div class = "member pointfive">
+        <img class = "pointfive" src="Images/pointfive.png" alt="pointfive" />
+        <p>3 hours before presentation</p>
+      </div>
     </section>
 
     <!-- ================= SUBSYSTEMS ================= -->
+    <div class = "key">
     <section class="system-diagrams">
       <h3>Key Mechanical Components</h3>
       <p>
@@ -78,10 +84,12 @@
         reliability, and ease of assembly.
       </p>
     </section>
-
+    <div>
+    
+      <div class="try">
     <section class="timeline">
       <div class="info-box">
-        <p class="title">Hand Frame</p>
+        <h3 class="title">Hand Frame</h3>
         <p class="more">
           A 3D-printed skeletal structure that supports all moving components. The frame was optimized
           for weight reduction while maintaining stiffness under load.
@@ -89,7 +97,7 @@
       </div>
 
       <div class="info-box">
-        <p class="title">Linear Actuators</p>
+        <h3 class="title">Linear Actuators</h3>
         <p class="more">
           Small linear actuators convert electrical input into linear motion. These actuators pull tendons
           to flex the fingers and release to allow extension.
@@ -97,13 +105,25 @@
       </div>
 
       <div class="info-box">
-        <p class="title">Tendon System</p>
+        <h3 class="title">Tendon System</h3>
         <p class="more">
           High-strength string is routed through the fingers to mimic biological tendons. This approach
           simplifies actuation and enables smoother, more natural motion.
         </p>
       </div>
     </section>
+    </div>
+
+
+    <div class="slideshow">
+      <button class="arrow left" onclick="prev()">&#10094;</button>
+      <img id="slide" src="Images/img1.jpg" alt="slideshow image">
+      <button class="arrow right" onclick="next()">&#10095;</button>
+    </div>
+    <p id="caption"></p>
+
+
+
 
     <!-- ================= GRIPS ================= -->
     <section class="overview">
