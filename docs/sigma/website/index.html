@@ -54,7 +54,8 @@
 										<header class="major">
 											<h2>Enigma Machine</h2>
 										</header>
-										<p>intro text</p>
+										<p>An electro-mechanical project developed by a team of five Olin College students for Principles of Integrated Engineering (PIE) - Fall 2025.
+</p>
 									</div>
 									<span class="image"><img src="images/enigma.png" alt="" /></span>
 								</div>
@@ -67,8 +68,22 @@
 							    
 							    <div class="spotlight">
 							        <div class="content">
-							            <h3>Step 1 Title</h3>
-							            <p>Your text content goes here. Describe the first step of your process.</p>
+							            <h3>Keyboard</h3>
+							            <p>The keyboard design borrows from the original Enigma Machine. It uses spring-loaded metal rods topped with labeled key-caps. When a letter is pressed, the key completes a circuit on the breadboard which gets sent to the arduino for processing.
+
+Each key has a 3D printed tab on it. On the rod is a spring that is sandwiched between the tab and the middle plate. When the key is pressed, the spring compresses. The pin at the end of the tab comes into contact with a piece of copper wire, completing the circuit. When the key is let go, the spring decompresses and puts the key back to the original position, breaking the circuit.
+
+We chose to make the keypresses send information to the Arduino for one particular reason. When the arduino recieves a signal of the swapped letter, both the pin corresponding to the keypress, and the pin corresponding to the swapped letter will read high. By sending the keyboard press to the arduino first, it can differentiate between the two, allowing it to send the swapped letter (and not the keypress!) to the display.
+
+The original idea was to use a small length of solder wick because it was conductive and flexible. However, since solder wick oxidizes so quickly, it might become unreliable, which led us to look for more reliable solutions. To make the connection, we soldered wires onto small pins we found in the Shop that fit perfectly onto the tabs. A small piece of the same copper wire we used for the rotors is glued onto a little stand and soldered to a wire that connects to the breadboard. In the resting position, the pins do not touch the copper, and when a slight bit of pressure is applied, they touch and the circuit is complete.
+
+The first iteration we had originally had the copper pieces sticking out from the brackets at an angle. It became clear that this wouldn’t work as the springs were too stiff and required too much force to contact well. Instead of redesigning, which would have taken too much time and iteration at that stage of the process, we just glued the copper pieces on top of the brackets, as they were at a good height. 
+
+A compromise we had to make was not using a lid. We had designed and laser-cut a lid, but with the amount of wires we had, and the non-constant key height, the lid would not fit. If we did this project again, we would have designed to be able to have a lid, which would restrain the keys from wobbling as much as they did.
+
+A tradeoff to making the keyboard as opposed to using a standard keyboard is time and redundancy. Since keys are made using springs and many small parts, each key is essentially a small mechanism, requiring hours of soldering. Since there are 26 letters in the alphabet, this creates long-repetitive tasks for the assembly of dozens of parts.
+
+</p>
 							        </div>
 							        <span class="image"><img src="images/step1.jpg" alt="" /></span>
 							    </div>
@@ -257,6 +272,7 @@
 	</body>
 
 </html>
+
 
 
 
