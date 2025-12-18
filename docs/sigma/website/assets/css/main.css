@@ -2981,12 +2981,12 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
-		.spotlight .content {
-			-moz-flex: 1;
-			-webkit-flex: 1;
-			-ms-flex: 1;
-			flex: 1;
-		}
+	.spotlight .content {
+	    -moz-flex: 2;
+	    -webkit-flex: 2;
+	    -ms-flex: 2;
+	    flex: 2;
+	}
 
 			.spotlight .content > :last-child {
 				margin-bottom: 0;
@@ -2996,20 +2996,20 @@ input, select, textarea {
 				margin: 0 0 2em 0;
 			}
 
-		.spotlight .image {
-			display: inline-block;
-			margin-left: 4em;
-			padding: 0.5em;
-			border-radius: 0;
-			border: solid 0.5px;
-		}
-
-			.spotlight .image img {
-				display: block;
-				border-radius: 0;
-				width: auto;
-				max-width: 100%;
+			.spotlight .image {
+			    display: inline-block;
+			    margin-left: 4em;
+			    -moz-flex: 1;
+			    -webkit-flex: 1;
+			    -ms-flex: 1;
+			    flex: 1;	
 			}
+			.spotlight .image img {
+		        display: block;
+		        border-radius: 8px;
+		        width: 100%;
+		        max-width: 400px; /* Adjust this value to control image size */
+		    }
 
 		@media screen and (max-width: 980px) {
 
@@ -3783,6 +3783,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
