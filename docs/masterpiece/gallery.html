@@ -1,317 +1,228 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Masterpiece – Demonstration</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  </head>
-  <body class="is-preload">
+<head>
+  <title>Masterpiece – Gallery</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-    <!-- Top Nav -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+  <style>
+    /* ==============================
+       VIDEO SECTION STYLING
+       ============================== */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .video-box {
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .video-box iframe,
+    .video-box video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      object-fit: contain;
+    }
+
+    h3 { margin-top: 30px; margin-bottom: 15px; }
+
+    /* ==============================
+       TIGHT PHOTO GRID (RATIO AWARE)
+       ============================== */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-auto-rows: 250px;
+      gap: 6px;
+    }
+
+    .photo-item {
+      position: relative;
+      grid-column: span 2; 
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .photo-item.tall {
+      grid-column: span 1; 
+      grid-row: span 2;
+    }
+
+    .photo-item img, 
+    .photo-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-caption {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      font-size: 0.9em;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1em;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      z-index: 2;
+    }
+
+    .photo-item:hover .photo-caption { opacity: 1; }
+    .photo-item video { pointer-events: auto; }
+  </style>
+</head>
+
+<body class="is-preload">
+
 <header id="top-nav">
   <div class="inner">
     <a href="index.html" class="brand">
-      <img src="images/masterpiecelogo.jpg" alt="Masterpiece Logo">
+      <img src="images/MasterpieceLogo.jpg" alt="Masterpiece Logo">
       <span>Masterpiece</span>
     </a>
 
     <nav>
       <ul>
-        <li><a href="index.html"       class="button small">Home</a></li>
-        <li><a href="mechanical.html"  class="button small">Mechanical</a></li>
-        <li><a href="electrical.html"  class="button small">Electrical</a></li>
-        <li><a href="software.html"    class="button small">Software &amp; Logic</a></li>
-        <li><a href="timeline.html"    class="button small">Timeline</a></li>
-        <li><a href="budget.html"      class="button small">Budget</a></li>
-        <li><a href="gallery.html"        class="button small">Gallery</a></li>
-        <li><a href="team.html"        class="button small">Team</a></li>
+        <li><a href="index.html" class="button small">Home</a></li>
+        <li><a href="mechanical.html" class="button small">Mechanical</a></li>
+        <li><a href="electrical.html" class="button small">Electrical</a></li>
+        <li><a href="software.html" class="button small">Software & Logic</a></li>
+        <li><a href="timeline.html" class="button small">Timeline</a></li>
+        <li><a href="budget.html" class="button small">Budget</a></li>
+        <li><a href="gallery.html" class="button small">Gallery</a></li>
+        <li><a href="team.html" class="button small">Team</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
+<section id="header">
+  <div class="inner">
+    <h1>Gallery</h1>
+    <p>Masterpiece in action: setup, gameplay, and key features.</p>
+  </div>
+</section>
 
-    <!-- Page Header -->
-    <section id="header">
-      <div class="inner">
-        <h1>Gallery</h1>
-        <p>Masterpiece in action: setup, gameplay, and key features.</p>
+<section class="main style1 special">
+  <div class="container">
+    <header class="major">
+      <h2>Video Demonstrations</h2>
+    </header>
+
+    <h3>Full Computer vs Computer Game</h3>
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/6tV0hDUYdYQ?autoplay=1&mute=1&playlist=6tV0hDUYdYQ&loop=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <h3>Fullgame timelapse & Game Reset</h3>
+    <div class="video-grid">
+      <div class="video-box">
+        <video autoplay muted playsinline loop>
+          <source src="videos/KieranVid1.mov" type="video/quicktime">
+        </video>
       </div>
-    </section>
-
-
-    <style>
-  .video-grid{
-    display:grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1.5em;
-    margin-bottom: 2em;
-  }
-  /* makes it responsive: goes 2-wide then 1-wide on small screens */
-  @media (max-width: 980px){ .video-grid{ grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 640px){ .video-grid{ grid-template-columns: 1fr; } }
-
-  .video-box{
-    position:relative;
-    padding-bottom:56.25%;
-    height:0;
-    overflow:hidden;
-  }
-  .video-box video{
-    position:absolute;
-    top:0; left:0;
-    width:100%; height:100%;
-  }
-</style>
-
-
-    <section class="main style1 special">
-      <div class="container">
-        <header class="major">
-          <h2>Video Demos</h2>
-        </header>
-
-        <h3>Full Computer vs Computer Game</h3>
-        <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-          <iframe
-            src="https://www.youtube.com/embed/6tV0hDUYdYQ"
-            title="Masterpiece Demo – YouTube"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <h3>Good Full Game</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/good_full_game.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Boring Full Game</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/boring_full_game.mp4" type="video/mp4" />
-  </video>
-</div>
-
-
-<h3>Rook Captures</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/rook_captures.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Smooth Knight</h3>
-<div class="video-grid">
-  <div class="video-box">
-    <video controls muted playsinline preload="metadata">
-      <source src="videos/smooth_knight_4.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <div class="video-box">
-    <video controls muted playsinline preload="metadata">
-      <source src="videos/smooth_knight_3.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <div class="video-box">
-    <video controls muted playsinline preload="metadata">
-      <source src="videos/smooth_knight.mp4" type="video/mp4" />
-    </video>
-  </div>
-</div>
-
-
-<h3>Bishop Realistic  </h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/bishop_realistic_3.mp4" type="video/mp4" />
-  </video>
-</div>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/bishop_realistic_2.mp4" type="video/mp4" />
-  </video>
-</div>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/bishop_realistic_mp4ement.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Smooth Capture</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/smooth_capture_2.mp4" type="video/mp4" />
-  </video>
-</div>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/more_smooth_capture.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Smooth Diagonals</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/smooth_diagonals.mp4" type="video/mp4" />
-  </video>
-</div>
-
-
-<h3>No Interference Capture</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/no_interference_capture.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Good Castling</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/good_castling.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Knight Interference</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/knight_interference(1).mp4" type="video/mp4" />
-  </video>
-</div>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/knight_interference.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Castling Interference</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/castling interference.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Corner Cutting</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/corner_cutting.mp4" type="video/mp4" />
-  </video>
-</div>
-
-
-<h3>Scuffed Promotion</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/scuffed_promotion.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>High Interference Captures</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/high_interference_captures.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Pawn Captured Interference</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/pawn_captured_interference.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Knight Captured Interference</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/knight_captured_interference.mp4" type="video/mp4" />
-  </video>
-</div>
-
-
-
-<h3>Building Gantry</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/Building_Gantry.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Gantry Test</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/Gantry_Test.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<h3>Limit Switch Test</h3>
-<div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2em;">
-  <video controls muted playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-    <source src="videos/Limit_Switch_Test.mp4" type="video/mp4" />
-  </video>
-</div>
-          <h3>Cutting the aluminum extrusions to size</h3>
-        <span class="image fit">
-                <img
-                  src="images/gallery1.jpg"
-                  style="width:30% !important; height:auto; display:block; margin:0 auto;"
-                />
-        </span>
-
-
-
+      <div class="video-box">
+        <video autoplay muted playsinline loop>
+          <source src="videos/KieranVid2.mov" type="video/quicktime">
+        </video>
       </div>
-    </section>
+    </div>
 
+    <hr />
 
+    <header class="major">
+      <h2>Build Photos</h2>
+      <p>Documentation from early gantry fabrication through final system integration.</p>
+    </header>
 
+    <div class="photo-grid">
+      <div class="photo-item tall"><img src="images/gallery1.jpg"><div class="photo-caption">Cutting the aluminum extrusions to size</div></div>
+      <div class="photo-item"><img src="images/gallery2.jpg"><div class="photo-caption">Pre-gantry v1 assembly</div></div>
+      <div class="photo-item"><img src="images/gallery3.jpg"><div class="photo-caption">Progress gantry v1 photo</div></div>
+      <div class="photo-item"><img src="images/gallery4.jpg"><div class="photo-caption">Magnet Carriage in progress</div></div>
+      <div class="photo-item"><img src="images/gallery5.jpg"><div class="photo-caption">X-axis pulley block v1</div></div>
+      <div class="photo-item tall"><img src="images/gallery6.jpg"><div class="photo-caption">V1 tensioner</div></div>
 
+      <div class="photo-item tall">
+        <video autoplay muted playsinline loop>
+          <source src="videos/Gantry_Test.mp4" type="video/mp4">
+        </video>
+      </div>
 
+      <div class="photo-item tall"><img src="images/gallery8.jpg"><div class="photo-caption">Limit switch integration and v2 corner blocks</div></div>
+      <div class="photo-item tall"><img src="images/gallery9.jpg"><div class="photo-caption">New corner blocks with additional tensioners</div></div>
+      <div class="photo-item"><img src="images/gallery10.jpg"><div class="photo-caption">V2 gantry</div></div>
+      <div class="photo-item tall"><img src="images/gallery11.jpg"><div class="photo-caption">Gantry extension pieces</div></div>
+      <div class="photo-item"><img src="images/gallery12.jpg"><div class="photo-caption">Final magnet carriage assembly with centered magnet</div></div>
+      <div class="photo-item"><img src="images/gallery13.jpg"><div class="photo-caption">V2 Gantry assembly with triple tensioner design</div></div>
+      <div class="photo-item tall"><img src="images/gallery14.jpg"><div class="photo-caption">V1 of prototype board mounting</div></div>
+      <div class="photo-item"><img src="images/gallery15.jpg"><div class="photo-caption">First layer of chessboard rastering</div></div>
+      <div class="photo-item"><img src="images/gallery16.jpg"><div class="photo-caption">Fully Rastered Chessboard</div></div>
+      <div class="photo-item tall"><img src="images/gallery17.jpg"><div class="photo-caption">3D printing chess pieces</div></div>
+      <div class="photo-item"><img src="images/gallery18.jpg"><div class="photo-caption">Soldering components onto PCB</div></div>
+      <div class="photo-item tall"><img src="images/gallery19.jpg"><div class="photo-caption">Manufacturing wooden support frame</div></div>
+      <div class="photo-item tall"><img src="images/gallery20.jpg"><div class="photo-caption">Cleaned up wiring for electronics</div></div>
+      <div class="photo-item"><img src="images/gallery21.jpg"><div class="photo-caption">Laser-cutting side panels</div></div>
+      <div class="photo-item tall"><img src="images/gallery22.jpg"><div class="photo-caption">Initial assembly of V1 gantry</div></div>
+      <div class="photo-item"><img src="images/gallery23.jpg"><div class="photo-caption">Surge protector mounting</div></div>
+      <div class="photo-item tall"><img src="images/gallery24.jpg"><div class="photo-caption">Fixing a warped 3D print</div></div>
+      <div class="photo-item"><img src="images/gallery25.jpg"><div class="photo-caption">Fully mounted board with V1 covering</div></div>
+      <div class="photo-item"><img src="images/gallery26.jpg"><div class="photo-caption">Laser-cut V2 covering with PCB wiring accounted for</div></div>
+      <div class="photo-item"><img src="images/gallery27.jpg"><div class="photo-caption">Assembling V2 covering</div></div>
+      <div class="photo-item"><img src="images/gallery29.jpg"><div class="photo-caption">Last day PCB wiring and soldering</div></div>
+      <div class="photo-item"><img src="images/gallery30.jpg"><div class="photo-caption">PCB wiring rats nest</div></div>
+      <div class="photo-item tall"><img src="images/gallery31.jpg"><div class="photo-caption">Soldering broken IO Expander pins</div></div>
+      <div class="photo-item"><img src="images/gallery32.jpg"><div class="photo-caption">Aligning PCBs using tape</div></div>
+      <div class="photo-item tall"><img src="images/gallery33.jpg"><div class="photo-caption">Kieran Erwin sleeping</div></div>
+      <div class="photo-item tall"><img src="images/gallery34.jpg"><div class="photo-caption">Prem Fedtchenko sleeping</div></div>
+      <div class="photo-item"><img src="images/gallery35.jpg"><div class="photo-caption">Unmounting bowing PCBs</div></div>
+      <div class="photo-item"><img src="images/gallery36.jpg"><div class="photo-caption">Final demo day presentation</div></div>
+      <div class="photo-item"><img src="images/gallery38.jpg"></div>
+      <div class="photo-item"><img src="images/gallery39.jpg"></div>
+      <div class="photo-item"><img src="images/gallery40.jpg"></div>
+      <div class="photo-item"><img src="images/gallery41.jpg"></div>
+      <div class="photo-item"><img src="images/gallery42.jpg"></div>
+    </div>
+  </div>
+</section>
 
-    		<!-- Gallery -->
-		<section id="gallery" class="main style1 special">
-			<div class="container">
-				<header class="major">
-					<h2>More Gallery</h2>
-					<p>
-						We documented Masterpiece throughout the semester, from early prototypes and wiring
-						to integrated motion tests. You can view the full  gallery at the link below.
-					</p>
-				</header>
+<footer id="footer">
+  <div class="inner">
+    <ul class="copyright">
+      <li>&copy; Masterpiece Chessboard</li>
+      <li>Template: <a href="https://html5up.net">HTML5 UP – Photon</a></li>
+    </ul>
+  </div>
+</footer>
 
-				<ul class="actions special">
-					<li>
-						<a href="https://photos.app.goo.gl/b3NMnPXeSb1Tjgq39"
-						   class="button primary"
-						   target="_blank" rel="noopener">
-							Open Google Photos Gallery
-						</a>
-					</li>
-				</ul>
-			</div>
-		</section>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
-    <!-- Footer -->
-    <section id="footer">
-
-      <ul class="copyright">
-        <li>&copy; Masterpiece Chessboard</li>
-        <li>Template: <a href="https://html5up.net">HTML5 UP – Photon</a></li>
-      </ul>
-    </section>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+</body>
 </html>
