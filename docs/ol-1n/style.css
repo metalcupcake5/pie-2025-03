@@ -15,7 +15,6 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     line-height: 1.6;
-    /* Starry background */
     background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
                       radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
                       radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
@@ -36,7 +35,6 @@ h2 {
     margin-top: 40px;
 }
 
-/* Navigation Bar */
 nav {
     background: rgba(0, 0, 0, 0.95);
     border-bottom: 3px solid var(--r2-blue);
@@ -67,7 +65,6 @@ nav a:hover, nav a.active {
     box-shadow: 0 0 10px var(--r2-blue);
 }
 
-/* Container */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -78,19 +75,23 @@ nav a:hover, nav a.active {
     min-height: 100vh;
 }
 
-/* Visual Elements */
 .placeholder-box {
     border: 2px dashed var(--r2-blue);
     background: rgba(0, 82, 136, 0.1);
-    padding: 40px;
+    padding: 20px;
     margin: 20px 0;
     text-align: center;
     color: var(--r2-white);
-    font-style: italic;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--r2-blue);
 }
 
 .btn {
@@ -114,17 +115,31 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    font-size: 0.9rem;
 }
 
 th, td {
     border: 1px solid #333;
-    padding: 12px;
+    padding: 10px;
     text-align: left;
 }
 
 th {
     background-color: var(--r2-blue);
     color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+pre {
+    background: #111;
+    border-left: 3px solid var(--star-wars-yellow);
+    padding: 15px;
+    overflow-x: auto;
+    color: #0f0;
 }
 
 footer {
@@ -134,4 +149,80 @@ footer {
     color: #666;
     border-top: 1px solid #333;
     margin-top: 50px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    border: 2px solid var(--r2-blue);
+    position: relative;
+    overflow: hidden; /* Keeps image inside border on zoom */
+    background: #000;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills box without stretching */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* The "Hero" (Big) Image */
+.gallery-item.hero {
+    grid-column: span 3; /* Spans all 3 columns */
+    height: 500px;        /* Tall, impressive height */
+    border-color: var(--star-wars-yellow); /* Yellow border for the main shot */
+}
+
+/* The Smaller Images */
+.gallery-item.small {
+    height: 250px;
+}
+
+/* Hover Effect */
+.gallery-item:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+    opacity: 0.9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stack everything on phones */
+    }
+    .gallery-item.hero {
+        grid-column: span 1;
+        height: 300px;
+    }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border: 2px solid var(--r2-blue);
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.gallery-item.hero img {
+    object-fit: contain; /* This forces the whole image to show without cropping */
+    background-color: #000; /* Keeps the background black for a cinematic look */
 }
