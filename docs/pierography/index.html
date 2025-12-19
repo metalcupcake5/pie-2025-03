@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principles of Integrated Engineering (PIE) Example Project Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>        
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Principles of Integrated Engineering (PIE) Example Project Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
 
-  <header>
-    <h1>PIErography</h1>
-    <nav>
+<header>
+  <h1>PIErography</h1>
+  <nav>
     <ul>
       <li><a href="#homepage">Homepage</a></li>
       <li><a href="#team">Team</a></li>
@@ -24,54 +25,64 @@
       <li><a href="#budget-breakdown">Budget Breakdown</a></li>
     </ul>
   </nav>
-  </header>
+</header>
 
 <section id="homepage">
-    <h2>Homepage</h2>
-    <h3>PIErography</h3>
-    <blockquote>PIErography is a 3-axis GRBL-controlled CNC pyrography machine that burns vector designs into wood using a heated tip</blockquote>
-    <h3>Project Summary</h3>
-    <p>In two months our goal was to design and build a CNC wood burning machine 
-      that can accurately burn custom designs onto wood surfaces. The system will use Grbl firmware 
-      to control X, Y, and Z-axes via stepper motors. </p>
+  <h2>Homepage</h2>
+  <h3>PIErography</h3>
+  <blockquote>PIErography is a 3-axis GRBL-controlled CNC pyrography machine that burns vector designs into wood using a heated tip</blockquote>
 
-     <h3>CAD of Project</h3>
-    <div class="image-container">
-        <img src="media/full_assembly_clamps.png" alt="FinaL CAD Image">
-    </div>
+  <h3>Project Summary</h3>
+  <p>
+    In two months our goal was to design and build a CNC wood burning machine
+    that can accurately burn custom designs onto wood surfaces. The system will use Grbl firmware
+    to control X, Y, and Z-axes via stepper motors.
+  </p>
 
-      <h3>Final Product Image</h3>
-    <div class="image-container">
-        <img src="media/real_final.png" alt="Final Product Image">
-    </div>
+  <h3>CAD of Project</h3>
+  <div class="image-container">
+    <img src="media/full_assembly_clamps.png" alt="Final CAD Image">
+  </div>
 
-    
+  <!-- FIX: put Final Product Image back -->
+  <h3>Final Product Image</h3>
+  <div class="image-container">
+    <img src="media/real_final.png" alt="Final Product Image">
+  </div>
 
-    <h3>What It Does</h3>
-<ul>
-  <li>Burns custom designs onto wood surfaces.</li>
-  <li>Runs on GRBL g-code to control X, Y, and Z motion.</li>
-  <li>Enables repeatable alignment using a fixed work surface.</li>
-  <li>Adjustable burn depth via Z control and temperature/speed tuning.</li>
-</ul>
+  <!-- Video stays directly under final product image -->
+  <h3>Machine in Action</h3>
+  <div class="mech-video video-with-label">
 
-<h3>Specs at a Glance</h3>
-<ul>
-  <li><strong>Working area:</strong> TBD</li>
-  <li><strong>Controller:</strong> Arduino + GRBL</li>
-  <li><strong>Motion:</strong> Belt drive (X/Y), lead screw (Z)</li>
-  <li><strong>Tool:</strong> Pyrography pen </li>
-  <li><strong>Materials:</strong> Plywood / MDF / Wood</li>
-</ul>
+    <video autoplay muted loop playsinline controls>
+      <source src="media/videos/final_vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-<h3>How It Works</h3>
-<ol>
-  <li>Design is imported (SVG / DXF).</li>
-  <li>CAM generates g-code (Fusion / Inkscape / other).</li>
-  <li>GRBL executes motion while the heated tip burns the path.</li>
-</ol>
+  <h3>What It Does</h3>
+  <ul>
+    <li>Burns custom designs onto wood surfaces.</li>
+    <li>Runs on GRBL g-code to control X, Y, and Z motion.</li>
+    <li>Enables repeatable alignment using a fixed work surface.</li>
+    <li>Adjustable burn depth via Z control and temperature/speed tuning.</li>
+  </ul>
 
+  <h3>Specs at a Glance</h3>
+  <ul>
+    <li><strong>Working area:</strong> TBD</li>
+    <li><strong>Controller:</strong> Arduino + GRBL</li>
+    <li><strong>Motion:</strong> Belt drive (X/Y), lead screw (Z)</li>
+    <li><strong>Tool:</strong> Pyrography pen</li>
+    <li><strong>Materials:</strong> Plywood / MDF / Wood</li>
+  </ul>
 
+  <h3>How It Works</h3>
+  <ol>
+    <li>Design is imported (SVG / DXF).</li>
+    <li>CAM generates g-code (Fusion / Inkscape / other).</li>
+    <li>GRBL executes motion while the heated tip burns the path.</li>
+  </ol>
 </section>
 
 <hr>
@@ -121,55 +132,54 @@
 
   <h3>Explanation</h3>
   <p>
-      The Blue Ghost scared away your energy flow diagram. You will have to put one in if you use this template.
+    The Blue Ghost scared away your energy flow diagram. You will have to put one in if you use this template.
   </p>
 </section>
-
 
 <hr>
 
 <section id="software">
-    <h2>Evolution of the Code</h2>
-    
-    <ol>
-        <li>
-            <strong>Initial Logic:</strong>
-            <ul>
-                <li>Ghost moves toward player.</li>
-                <li>Ghost runs from player powered up by a power pellet.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Second Iteration:</strong>
-            <ul>
-                <li>Ghost hides when it is not "it".</li>
-                <li>Ghost seeks when it is "it".</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Final Iteration:</strong>
-            <ul>
-                <li>Ghost opens arms and waits.</li>
-                <li>When player approaches ghost, they hug and become friends.</li>
-            </ul>
-        </li>
-    </ol>
+  <h2>Evolution of the Code</h2>
 
-    <h3>Final Code Design Elements</h3>
-    <br />
-    <p><strong>Code Repository:</strong> <a href="https://github.com/">GitHub Link</a></p>
-    <br />
+  <ol>
+    <li>
+      <strong>Initial Logic:</strong>
+      <ul>
+        <li>Ghost moves toward player.</li>
+        <li>Ghost runs from player powered up by a power pellet.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Second Iteration:</strong>
+      <ul>
+        <li>Ghost hides when it is not "it".</li>
+        <li>Ghost seeks when it is "it".</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Final Iteration:</strong>
+      <ul>
+        <li>Ghost opens arms and waits.</li>
+        <li>When player approaches ghost, they hug and become friends.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h3>Final Code Design Elements</h3>
+  <br />
+  <p><strong>Code Repository:</strong> <a href="https://github.com/">GitHub Link</a></p>
+  <br />
 </section>
 
 <section id="electrical">
-    <h3>Circuit Design</h3>
-    <p>The circuit has been eated by a ghost.</p>
+  <h3>Circuit Design</h3>
+  <p>The circuit has been eated by a ghost.</p>
 
-    <h3>System Diagrams</h3>
-    <h4>Circuit Design</h4>
-    <p><strong>Description:</strong> The circuit tried to fry the ghost.</p>
-    <p><strong>Diagram:</strong></p>
-    <img src="media/circuit_image.png" alt="Circuit Diagram">
+  <h3>System Diagrams</h3>
+  <h4>Circuit Design</h4>
+  <p><strong>Description:</strong> The circuit tried to fry the ghost.</p>
+  <p><strong>Diagram:</strong></p>
+  <img src="media/circuit_image.png" alt="Circuit Diagram">
 </section>
 
 <hr>
@@ -178,11 +188,11 @@
   <h2>Mechanical Aspects</h2>
 
   <p class="mechanical-intro">
-    The mechanical design prioritizes rigidity, repeatability, and ease of assembly. All CAD was developed in Onshape, which allowed the team 
-    to iterate quickly. The frame provides a stable reference plane for consistent burns, while 
+    The mechanical design prioritizes rigidity, repeatability, and ease of assembly. All CAD was developed in Onshape, which allowed the team
+    to iterate quickly. The frame provides a stable reference plane for consistent burns, while
     belt-driven X and Y axes enable fast planar motion. A lead-screw Z axis was used to control burn depth and maintain consistent tool contact
-    with the workpiece. Components were intentionally designed to be modular to support iteration, including swapping motors, re-tensioning 
-    belts, and adjusting the tool mount. Parts were fabricated using a combination of 3D printing and laser cutting, with structural elements 
+    with the workpiece. Components were intentionally designed to be modular to support iteration, including swapping motors, re-tensioning
+    belts, and adjusting the tool mount. Parts were fabricated using a combination of 3D printing and laser cutting, with structural elements
     cut using band saws and horizontal band saws to achieve accurate lengths and clean edges.
   </p>
 
@@ -193,11 +203,19 @@
     <div class="mech-main">
       <div class="mech-text">
         <p><strong>Design Concepts:</strong></p>
-        
+        <ul>
+          <li>Rigid base to minimize vibration during burns.</li>
+          <li>Flat, repeatable work surface for consistent alignment.</li>
+          <li>Modular mounting points for future upgrades.</li>
+        </ul>
       </div>
 
-      <div class="mech-image">
+      <div class="mech-image-stack">
         <img src="media/frame_cad.png" alt="CAD of Frame">
+        <img src="media/frame_side1.png" alt="Frame photo 1">
+        <img src="media/frame_side2.png" alt="Frame photo 2">
+        <img src="media/frame_side3.png" alt="Frame photo 3">
+        <img src="media/frame_side4.png" alt="Frame photo 4">
       </div>
     </div>
 
@@ -209,6 +227,37 @@
     </div>
   </div>
 
+  <!-- BASE BOARD & CLAMP -->
+  <div class="mech-block" id="mech-board">
+    <h3>Base Board</h3>
+
+    <div class="mech-main">
+      <div class="mech-text">
+        <p><strong>Design Concepts:</strong></p>
+        <ul>
+          <li>Rigid base to minimize vibration during burns.</li>
+          <li>Flat, repeatable work surface for consistent alignment.</li>
+          <li>Clamping approach keeps stock from shifting during long burns.</li>
+        </ul>
+      </div>
+
+      <div class="mech-image-stack">
+        <img src="media/base.png" alt="CAD of Base Board">
+        <img src="media/base_side1.png" alt="Base board photo 1">
+        <img src="media/base_side2.png" alt="Base board photo 2">
+        <img src="media/base_side3.png" alt="Base board photo 3">
+        <img src="media/base_side4.png" alt="Base board photo 4">
+      </div>
+    </div>
+
+    <div class="mech-gallery">
+      <img src="media/base_1.png" alt="Base board detail 1">
+      <img src="media/base_2.png" alt="Base board detail 2">
+      <img src="media/base_3.png" alt="Base board detail 3">
+      <img src="media/base_4.png" alt="Base board detail 4">
+    </div>
+  </div>
+
   <!-- X AXIS -->
   <div class="mech-block" id="mech-x">
     <h3>X-Axis</h3>
@@ -216,16 +265,66 @@
     <div class="mech-main">
       <div class="mech-text">
         <p><strong>Design Concepts:</strong></p>
-        <ul>
-          <li>Belt-driven motion for speed and smoothness.</li>
-          <li>Simple tensioning to reduce backlash and skipping.</li>
-          <li>Carriage designed to keep the tool centered and stable.</li>
-        </ul>
+
+        <p>
+          For our x-axis, we started out with the basic idea of having an idler pulley on one side and a stepper motor driving the pulley on the other side. We wanted to attach the pen holder to the belt so that it would move along the x-axis as the motor moved the belt. To make sure that it would be secure, we added the mounts for the rail.
+        </p>
+
+        <p>
+          We were originally planning on having each side supported by the same linear slide, but we found that each rail introduced a lot of friction into our y-axis movements, so we changed to a slider that mounted onto the extrusion. This made it so that we had to change the base of the mount so that it would be able to fit on the new slider.
+        </p>
+
+        <p>
+          We extended the slots for the motor to allow it to slide back and forth. This would allow us to tension the belt. We also added a wall on the side with a screw hole in it which would allow space for a press plate that could be screwed in or loosened to apply more or less pressure to the side of the motor, for tensioning.
+        </p>
+
+        <p>
+          When we tested the early versions of the x-axis, we had the motor and the idler pulley much lower down and they were at the edge of the mount. To make the spacing work better with the z-axis, we had to move the pulleys higher and further in. As a result, we found that we needed much more support in a lot of key areas when testing our design.
+        </p>
+
+        <p>
+          The tension from the belt was causing the idler pulley support to bend inwards and we were worried that the axle it was on would snap. We also noticed that when we would push on one side, the other side would lag behind slightly, resulting in a noticeable gap when the side we were pushing on would reach the end of the y-axis.
+        </p>
+
+        <p>
+          We figured that this was a result of the shallow supports for the rail as well as the pliability of the 3D prints. We also noticed that moving the motor in made supporting the face it was mounted to much more difficult since there was a screw hole right next to the motor’s side. Since the other side of the motor hung out over the edge of our machine, the best side to support the face on to prevent bending was the one that was over the screw hole.
+        </p>
+
+        <p>
+          After our initial testing, we made a bunch of adjustments to improve the stability. First, we changed the depth of the rail supports from 5 mm to 10 mm and added support holes that we would be able to run a metal axle through to provide more stiffness without losing more workspace to the rail being pushed further into the mounts.
+        </p>
+
+        <p>
+          We also added a second side for the idler pulley mount and changed it so that the axle would no longer be 3D printed and would instead be a metal axle that we would put in after the print. Lastly, we added an I-beam under the motor so that it would no longer be hanging off the back of the mount, and we added a roof to the motor mount which would connect it to a wall that was perpendicular to the mount, allowing for better support.
+        </p>
+
+        <p>
+          As a part of some final adjustments after more testing, we added a slot on top of the rail mount for the limit switch to go in and a slot on the side of the mount to allow for wire management. We also added holes into the top of the motor mounts so that we would be able to see if the rails were fully pressed into the mounts.
+        </p>
+
+        <p>
+          Finally, we extended the rail mount holder further back. After the initial testing, we also added the belt mount on the side of the motor mount, which would allow it to be mounted to the y-axis belt so that it could be moved back and forth.
+        </p>
+
+        <p>
+          After doing more testing, we found that the 3D print tolerancing was causing issues where the distance between the two sides of the mount was slightly less than that of the rail length, so the rail would be pushing the two sides apart, causing issues with movement and leveling. We also extended the back part of the rail mount holders back to allow for better support for the rail holder. This also allowed us to support the pulley walls on the idler pulley side, so they would be less likely to bend.
+        </p>
       </div>
 
-      <div class="mech-image">
+      <div class="mech-image-stack">
         <img src="media/x_axis.png" alt="X-Axis CAD">
+        <img src="media/x_axis_side.png" alt="X-axis photo 1">
+        <img src="media/X-Axis_Idler_Pulley_Mount_v1.png" alt="X-axis photo 2">
+        <img src="media/X-Axis_Idler_Pulley_Mount_v2.png" alt="X-axis photo 3">
+        <img src="media/X-Axis_Motor_Mount.png" alt="X-axis photo 4">
       </div>
+    </div>
+
+    <div class="mech-video">
+      <video autoplay muted loop playsinline>
+        <source src="media/videos/X_axis_movement.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
 
     <div class="mech-gallery">
@@ -250,9 +349,20 @@
         </ul>
       </div>
 
-      <div class="mech-image">
+      <div class="mech-image-stack">
         <img src="media/y_axis.png" alt="Y-Axis CAD">
+        <img src="media/y_side1.png" alt="Y-axis photo 1">
+        <img src="media/y_side2.png" alt="Y-axis photo 2">
+        <img src="media/y_side3.png" alt="Y-axis photo 3">
+        <img src="media/y_side4.png" alt="Y-axis photo 4">
       </div>
+    </div>
+
+    <div class="mech-video">
+      <video autoplay muted loop playsinline>
+        <source src="media/videos/Y_axis_movment.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
 
     <div class="mech-gallery">
@@ -270,16 +380,51 @@
     <div class="mech-main">
       <div class="mech-text">
         <p><strong>Design Concepts:</strong></p>
+
+        <p>The Z-axis assembly moves the wood burner up and down and is connected to the X-axis.</p>
+
         <ul>
-          <li>Lead screw for controlled, repeatable depth.</li>
-          <li>Mount designed to keep the pyrography tool vertical.</li>
-          <li>Has timimg belt clamps for the x-axis. </li>
+          <li>Decided it should be short and lightweight so the other axes had less mass to move</li>
+          <li>Long enough to allow for different height pieces to burn</li>
+          <li>The shortest lead screw available was 100mm, which was close to the length of the axis we wanted, so we designed the mount around it.</li>
+          <li>More precise and stable than other axes - decided on lead screw</li>
+          <li>Need to be able to assemble - bolts needed to be accessible and not blocked by other parts</li>
+          <li>Limit switch on bottom to prevent tip from hitting base plate. Would have been useful on the top to prevent binding and help zero</li>
+        </ul>
+
+        <p>Consider 3D printing,</p>
+        <ul>
+          <li>Mount needed to be printable on the side so layers are sturdy</li>
+          <li>Slide needed to be vertical so holes were smooth with no supports, and most dimensionally accurate</li>
+        </ul>
+
+        <p>
+          The rods we had at first were shorter than the lead screw, so I came up with different standoff options. Realized it would be very difficult to get bolts in and was unnecessary. Ended up getting longer rods. The slider didn’t have a purposeful hard stop at the top, so it would hit the shaft coupler and bind. Needed to use pliers to get it to unstick.
+        </p>
+
+        <p>Difficulty tolerancing</p>
+        <ul>
+          <li>Considered using mill to get holes perfectly smooth and toleranced, decided for such a small part with minimal force that level of precision was not necessary. The prints and rods would have some give, there was not much travel, and the slide was tall enough to not rotate and get stuck when it’s slightly loose, so it was not crucial to be exact.</li>
+          <li>Tried drilling it out but it melted</li>
+          <li>Printed a test size piece to determine hole sizes</li>
+          <li>Considered using nylon bearings, but decided we could get a closer fit with 3D print</li>
+          <li>The rails were a hard press fit at first but became loose by the end</li>
         </ul>
       </div>
 
-      <div class="mech-image">
+      <div class="mech-image-stack">
         <img src="media/z_axis.png" alt="Z-Axis CAD">
+        <img src="media/Z_axis_back.png" alt="Z-axis photo 1">
+        <img src="media/Z_axis_exploded.png" alt="Z-axis photo 2">
+        <img src="media/Z_axix_clamp.png" alt="Z-axis photo 3">
       </div>
+    </div>
+
+    <div class="mech-video">
+      <video autoplay muted loop playsinline>
+        <source src="media/videos/Z_axix_movment.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
 
     <div class="mech-gallery">
@@ -304,8 +449,12 @@
         </ul>
       </div>
 
-      <div class="mech-image">
+      <div class="mech-image-stack">
         <img src="media/motor_house.png" alt="Motor House CAD">
+        <img src="media/motor_side1.png" alt="Motor house photo 1">
+        <img src="media/motor_side2.png" alt="Motor house photo 2">
+        <img src="media/motor_side3.png" alt="Motor house photo 3">
+        <img src="media/motor_side4.png" alt="Motor house photo 4">
       </div>
     </div>
 
@@ -317,67 +466,391 @@
     </div>
   </div>
 </section>
-  
 
 <hr>
 
 <section id="prototype">
-    <h2>Prototype</h2>
-    
-    <p>
-      It all came together.
-    </p>
-       
-    <h3>Key Features</h3>
-  
-    <h3>Prototype Gallery</h3>
-    <div class="image-container">
-      <img src="media/ghosts.png" alt="prototype">
-    </div>
-  
-  </section>
- 
-  <hr>
+  <h2>Prototype</h2>
+
+  <p>It all came together.</p>
+
+  <h3>Key Features</h3>
+
+  <h3>Prototype Gallery</h3>
+  <div class="image-container">
+    <img src="media/ghosts.png" alt="prototype">
+  </div>
+</section>
+
+<hr>
 
 <section id="budget-breakdown">
-    <h2>Budget Breakdown</h2>
+  <h2>Budget Breakdown</h2>
 
-    <h3>Overview</h3>
-    <p>Summary of how the $250 budget was allocated.</p>
+  <h3>Overview</h3>
+  <p>
+    Estimated spending is what we would have spent if we purchased every item (including items that were found/borrowed).
+    Total spending is what we actually paid out-of-pocket.
+  </p>
 
-    <h3>Table of Components</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Component</th>
-                <th>Description</th>
-                <th>Link</th>
-                <th>Unit Cost</th>
-                <th>Units</th>
-                <th>Cost</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Class stuff</td>
-                <td>fancy supplies</td>
-                <td><a href="https://www.amazon.com/">Amazon Link</a></td>
-                <td>$249.99</td>
-                <td>1</td>
-                <td>$249.99</td>
-            </tr>
-             <tr>
-                <td>Class stuff</td>
-                <td>fancy supplies</td>
-                <td><a href="https://www.amazon.com/">Amazon Link</a></td>
-                <td>$249.99</td>
-                <td>1</td>
-                <td>$249.99</td>
-            </tr>
-        </tbody>
-    </table>
-    <p><strong>Total Cost: $249.99</strong></p>
+  <h3>Budget Summary</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Budget Item</th>
+        <th>Amount ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Project Budget</strong></td>
+        <td><strong>$250.00</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Estimated Spending (if purchased all parts)</strong></td>
+        <td><strong>$598.83</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Total Spending (actual)</strong></td>
+        <td><strong>$225.78</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Amount Left</strong></td>
+        <td><strong>$24.22</strong></td>
+      </tr>
+    </tbody>
+  </table>
 
+  <h3>Bill of Materials (BOM)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Part Name</th>
+        <th>Qty</th>
+        <th>Unit Cost ($)</th>
+        <th>Total Cost ($)</th>
+        <th>Estimated Cost If Purchased ($)</th>
+        <th>Vendor/Source</th>
+        <th>Link</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- FOUND / BORROWED (Estimated Cost If Purchased > 0) — TOP -->
+
+      <tr>
+        <td>80/20 Aluminum Extrusion</td>
+        <td>1</td>
+        <td>$47.35</td>
+        <td>$0.00</td>
+        <td>$47.35</td>
+        <td>Shop</td>
+        <td><a href="https://www.mcmaster.com/47065T101/" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>Limit Switches</td>
+        <td>3</td>
+        <td>$2.99</td>
+        <td>$0.00</td>
+        <td>$8.97</td>
+        <td>PIE Bins</td>
+        <td><a href="https://www.gobilda.com/micro-limit-switch-roller-lever-2-pack/?setCurrencyId=1&sku=3103-0001-0001&srsltid=AfmBOorGQJpQ5NiX-PnrOGTcluW431hNdzg3Mj_hRMCGaePOG6OT9N5Xr-Y" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>GT2 idler pulley</td>
+        <td>2</td>
+        <td>$8.99</td>
+        <td>$0.00</td>
+        <td>$17.98</td>
+        <td>Mech Proto</td>
+        <td><a href="https://www.amazon.com/WINSINN-Aluminum-Timing-Pulley-Printer/dp/B07BPGYX3G/ref=sr_1_3?dib=eyJ2IjoiMSJ9.E0CUe94c7G6RnNxkI1F_amWzLyY4eViOUyd9XEzqS_0HCdZlnnKs60SacjLF7NSzb6dvD0Fot5AcIeYaxOJknmQd_KUkYhMdfbsMFnw_LzIk0sZ0ZA9p6G1_Fu8xS0zWryGgOczk9wlLhvZZeJwHwf4JHxHK9WnCLqrPTRtmNAkDgwZ7x4dGZV_9kwPZYbvEuHcurnhDg7TYqbjG_qfC4dSR5T6PC0FXONir86WyNug.ul7eWoYJ9vNxY1oCk6uKSGuGIl6jATI3Y8XzqsDeIto&dib_tag=se&keywords=GT2%2BIdler%2BPulley&qid=1765285511&sr=8-3&th=1" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>GT2 pulley with set screws</td>
+        <td>2</td>
+        <td>$3.75</td>
+        <td>$0.00</td>
+        <td>$7.50</td>
+        <td>Mech Proto</td>
+        <td><a href="https://makerstore.cc/product/belt-gt2-6w-5-tp16/?srsltid=AfmBOopF9WGPlqPzKi5lXww8pWWPM7TC33FGAfAWG-nU-jPCHxKFsb-o" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>1/4&quot; Peg Board</td>
+        <td>1</td>
+        <td>$25.88</td>
+        <td>$0.00</td>
+        <td>$25.88</td>
+        <td>Shop</td>
+        <td><a href="https://www.amazon.com/Daanxw-Universal-Pegboard-Accessories-Organization/dp/B0DXK4ZGPB/ref=sr_1_3?dib=eyJ2IjoiMSJ9.3QWffsR3zlX9Ka3Vwly6_sPLiiBHg8Dx82sKGUFvYpiiq95WpwiKI0zFnmlDuC4QZkFJhrQIrKNyW5pKGsSaomPG_L0fzva3qoOYelPRcdi4RourirH8P5Fy4bYXfr7oMsy1w96gFrB85ld79L2gWrYTsV-mrJCx65bMrU2kn9OIhNi8EVE_USlG7rEGTlEUN0vdcG8fWmjCwOyGmU4mdg-nxwkJJADodo8qTVMXaZY.rNTPdACOFb3B_Ro7P4Xcf_ZXdaNMMH0asuVfkw3oC4w&dib_tag=se&hvadid=174244685955&hvdev=c&hvexpln=0&hvlocphy=9002079&hvnetw=g&hvocijid=3145182808449686486--&hvqmt=e&hvrand=3145182808449686486&hvtargid=kwd-375653844426&hydadcr=948_9642199&keywords=1%2F4%2Bpegboard&mcid=c37d64c570603234a61bd52f58af1c0d&qid=1765288616&sr=8-3&th=1" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found (8&quot; x 12&quot;)</td>
+      </tr>
+
+      <tr>
+        <td>1/8&quot; MDF</td>
+        <td>1</td>
+        <td>$1.25</td>
+        <td>$0.00</td>
+        <td>$1.25</td>
+        <td>Foundry</td>
+        <td><a href="https://makerstock.com/products/mdf" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found (8&quot; x 12&quot;)</td>
+      </tr>
+
+      <tr>
+        <td>Heat Set Inserts</td>
+        <td>1</td>
+        <td>$18.63</td>
+        <td>$0.00</td>
+        <td>$18.63</td>
+        <td>Mech Proto</td>
+        <td><a href="https://www.mcmaster.com/93365A102/" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>M4 Nut</td>
+        <td>1</td>
+        <td>$13.24</td>
+        <td>$0.00</td>
+        <td>$13.24</td>
+        <td>Shop</td>
+        <td><a href="https://www.mcmaster.com/91290A140/" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>M3 Nuts</td>
+        <td>1</td>
+        <td>$11.58</td>
+        <td>$0.00</td>
+        <td>$11.58</td>
+        <td>Shop</td>
+        <td><a href="https://www.mcmaster.com/91290A111/" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>Wood T Nuts</td>
+        <td>1</td>
+        <td>$11.59</td>
+        <td>$0.00</td>
+        <td>$11.59</td>
+        <td>Mech Proto</td>
+        <td><a href="https://www.insertsdirect.com/product/t-nut-steel-m3-x-5mm-23" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>HGW15CC linear slider with 350 mm rail</td>
+        <td>1</td>
+        <td>$8.87</td>
+        <td>$0.00</td>
+        <td>$8.87</td>
+        <td>Prof Jesse</td>
+        <td><a href="https://limobearing.com/hg15-20-25-linear-guide?srsltid=AfmBOopmvGV2JfsaR-6nTsPi40HdPjbzB54rGkimeJfZ_YmrQRP3H-616Fw" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>HGW20CCZAC linear slide with 340 mm rail</td>
+        <td>1</td>
+        <td>$91.75</td>
+        <td>$0.00</td>
+        <td>$91.75</td>
+        <td>Jesse</td>
+        <td><a href="https://motionconstrained.com/store/hiwin-linear-guides/hiwin-hg-series-linear-guides/hg-linear-guide-sets/hiwin-hgw20cczac-flange-block-linear-guides/?srsltid=AfmBOooKd7zz5SS48CDXbjKnOqjNrqqi-Ur-FfuEpvZihXlVxXP0mgOv" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>10 Series 3 Slot Mount - Double Flange Short Standard Linear Bearing with Brake Holes</td>
+        <td>1</td>
+        <td>$64.10</td>
+        <td>$0.00</td>
+        <td>$64.10</td>
+        <td>Shop</td>
+        <td><a href="https://8020.net/6425.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>1/4&quot; steel rod</td>
+        <td>1</td>
+        <td>$5.42</td>
+        <td>$0.00</td>
+        <td>$5.42</td>
+        <td>Shop</td>
+        <td><a href="https://www.homedepot.com/p/Everbilt-1-4-in-x-3-ft-Plain-Steel-Solid-Round-Rod-0001/332734314" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>Screw-in rubber feet</td>
+        <td>1</td>
+        <td>$7.08</td>
+        <td>$0.00</td>
+        <td>$7.08</td>
+        <td>Shop</td>
+        <td><a href="https://www.walmart.com/ip/Zehuanyu-4pcs-Furniture-Leveling-Rubber-Feet-With-Screws-Threaded-Furniture-Levelers-Adjustable-Feet-Leveling-Foot-Pads-Adjustable-Furniture-Legs/15348852762?wmlspartner=wlpa&selectedSellerId=101681645&selectedOfferId=CE2BC44161C632A39193F87A9B628939&conditionGroupCode=1" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>Black PLA</td>
+        <td>1</td>
+        <td>$22.99</td>
+        <td>$0.00</td>
+        <td>$22.99</td>
+        <td>Foundry</td>
+        <td><a href="https://www.bestbuy.com/product/bambu-lab-1-75mm-pla-basic-filament-black/CZTZV9Z73L/sku/6609453?utm_source=feed&extStoreId=436" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <tr>
+        <td>Tight-tolerance aluminum rod</td>
+        <td>1</td>
+        <td>$8.87</td>
+        <td>$0.00</td>
+        <td>$8.87</td>
+        <td>Mech Proto</td>
+        <td><a href="https://www.mcmaster.com/9062K26-9062K352/" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>found</td>
+      </tr>
+
+      <!-- ORDERED / PAID (Estimated Cost If Purchased = 0) — BOTTOM -->
+
+      <tr>
+        <td>Nema 17 Stepper Motor 2 Phase 1.8° 0.6Nm</td>
+        <td>3</td>
+        <td>$17.09</td>
+        <td>$51.27</td>
+        <td>$0.00</td>
+        <td>Amazon</td>
+        <td><a href="https://www.amazon.com/YEJMKJ-Stepper-84-97oz%C2%B7-Bipolar-Printer/dp/B0FHHYDRMT/ref=sr_1_3?crid=30MVFK0Y7L4WQ&dib=eyJ2IjoiMSJ9.4zT9TEEYAgem-FwCmPswM4teNSFEGFPZ1xUL3rWBVfXKvM6Ec9Og1Afc-9MzLZX3JIbnwu2_GgXwOqUg_VKMPsN41XP6vAVKbiTgx0iWQtmYd8C4QvqW8v3rF9aWIZf6-5hIqvzKJ9HkFoAS9Bj-wpuv0KWJ3qqcS9nVTqB9Z70GemD3gNyssgC3842Chqt3ANtLwFF0_mFg0MxUlziulO_4EyBtTlXZw8u3DZl6kiM.VIILIdl0C24sA1r34GU4nsI6IA007a8FVRiZzBN8cDs&dib_tag=se&keywords=nema+17+motors+0.6Nm&qid=1761853529&sprefix=nema+17+motors+0.6nm+%2Caps%2C110&sr=8-3" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+      <tr>
+        <td>3 PCS of TB6600 Stepper Motor Driver</td>
+        <td>1</td>
+        <td>$24.99</td>
+        <td>$24.99</td>
+        <td>$0.00</td>
+        <td>Amazon</td>
+        <td><a href="https://www.amazon.com/TB6600-Stepper-Driver-Controller-Controls/dp/B07GVFTHPT/ref=sr_1_5_sspa?dib=eyJ2IjoiMSJ9.DV2d9vwZ0sXoq5XN-GLoL2t7FNZplLIuFuSYkx03mo4MwZ2YLsWKDMaFpPA9Wis_pxJKPpu5u2Fo4v-FysP0B5elZRmqck8ce0P1g1dOggnPtsrUcEv11duQk-fmYqOAnM1X3wTYEEsMma_OaGd_dOCw0tcUDhpAexXor0BlJeWkfm5oZHBAReiNqOeTy8JsA3IWZkJNBnHlV0BUV_oq6A1ROegbT_JRLw7mWhq6XtFEmWDmWT2-LBL1Qh4omW04YoA05RMc0cGzrO8SKsJOitxoi53kEjMhFnzei37tvzU.zyXQvr12KFvLVAblYuV2CP4GbH1UGf8rd5lS5It1ddM&dib_tag=se&keywords=tb6600&qid=1761861608&sr=8-5-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+      <tr>
+        <td>Arduino UNO R4 WiFi</td>
+        <td>1</td>
+        <td>$27.50</td>
+        <td>$27.50</td>
+        <td>$0.00</td>
+        <td>Amazon</td>
+        <td><a href="https://www.amazon.com/Arduino-UNO-WiFi-ABX00087-Bluetooth/dp/B0C8V88Z9D/ref=sr_1_2?crid=29HAHNXUYVU8O&dib=eyJ2IjoiMSJ9.Z0pqYhv8ZS5vMrYnsMRm1R0xbsZht3LjB4IQscLlumxhnZG5eudwvsegtvpf1bp4QwxbCZv-TLdgGt2qSCbABbnrejSpWolCG6z0rKzZUeP9UD0F-qW6GMs1RXM-ay-NsJEEv_tiEutQQV4LNFfr060wFvKMIAyPwRTZtpEKpwSSay7sTqyvYTQhp8J8c7a8JzO06VZcu9bUyJ7-8atk7yfYmYCXtJb3in2pa30PLgU.xLq4Jd5ddHem-kBK5tOhbiVuAls1H-Xw2A23HuAwjt4&dib_tag=se&keywords=arduino&qid=1762209839&sprefix=arduino+%2Caps%2C131&sr=8-2" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+      <tr>
+        <td>GT2 Timing Belt Pulley 20 Teeth, 5mm Bore, for 6mm Width Belt</td>
+        <td>1</td>
+        <td>$6.99</td>
+        <td>$6.99</td>
+        <td>$0.00</td>
+        <td>Amazon</td>
+        <td><a href="https://www.amazon.com/WINSINN-Aluminum-Synchronous-Timing-Printer/dp/B077GNZK3J/ref=sr_1_3?dib=eyJ2IjoiMSJ9.FBvR3J52Y6g3359BrrjkdX-J7orNsrpB9HhHGEC3T1Ez-OAXkv3cjyN3zsRr5nKtzKgITU9ws97BcT93sC65UqnkWPjsQtK1zHnm6PbmNpV9YjEg9igxWG_4V7GO8Wn2D8XAayiCHprfLCWZ3K3jK7wATdF-DLKNiJjVOx6CWUW8Y6OE8lWDLbSMuzlw-PxkbnC8WoCOfMhkkBt5QZLTmP5S8ijHw-7ZOxX5QEXRFdc.YqpkBzkgzBo7ztcex2_AYGlQ0fgx6TsMRFq04IM3--U&dib_tag=se&keywords=gt2%2Bpulley&qid=1761855164&sr=8-3&th=1" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+      <tr>
+        <td>Wood Burning Tool</td>
+        <td>1</td>
+        <td>$39.99</td>
+        <td>$39.99</td>
+        <td>$0.00</td>
+        <td>Amazon</td>
+        <td><a href="https://www.amazon.com/FIRElood-Pyrography-Burning-Upgraded-Adjustable/dp/B09N78455D/ref=sr_1_6?crid=14XCJLNJSYELA&dib=eyJ2IjoiMSJ9.OSr12Bm3zqXkk5zyMigYeJcUdX3P6vhkvoOyzW0UGmhtohgiL26gKoTaeswb-7UN2LbQyoBTtiMY6ZzwA0pkcs6Cmek10IdEhigUAnCNdG1BFNsF7NLJBzCuEwG8Ip7u5tDQL4sXxEkEDO-kotw4pWCP8MrF7ZWSRsRdBUBaOb-j04ox3wUuPQFnmNX5z8qG6htm0HlBVsisfV4OpcZdoEhrS_AmFaQgM9lVv25NRCdReLQeSiCC7232jxosvMRHN1d10XjW0ps1PKsd9fQ-yVPfGKmm_MPfyjK72yBQFDg.5U2cd2WwO-8MIb1Sj-dqddgGgenjADDp5zerpwb_eV4&dib_tag=se&keywords=wire%2Bnib%2Bwood%2Bburning%2Bkit&qid=1761664495&sprefix=wire%2Bnib%2Bwoo%2Caps%2C108&sr=8-6&th=1" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+      <tr>
+        <td>20 Sets Silver 2020 Corner Bracket Kit</td>
+        <td>1</td>
+        <td>$14.64</td>
+        <td>$14.64</td>
+        <td>$0.00</td>
+        <td>Amazon</td>
+        <td><a href="https://www.amazon.com/dp/B0F1B1N5N1/ref=sspa_dk_detail_2?pd_rd_i=B0F1B1N5N1&pd_rd_w=MeK8G&content-id=amzn1.sym.f2f1cf8f-cab4-44dc-82ba-0ca811fb90cc&pf_rd_p=f2f1cf8f-cab4-44dc-82ba-0ca811fb90cc&pf_rd_r=2V1348DBYHHJZTTQBHBY&pd_rd_wg=E1K7p&pd_rd_r=b3bf1f20-c925-435e-89a9-834e105c5646&s=hi&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+      <tr>
+        <td>2PCS Shaft Coupling 5mm to 8mm Aluminum Alloy Joint</td>
+        <td>1</td>
+        <td>$8.54</td>
+        <td>$8.54</td>
+        <td>$0.00</td>
+        <td>Amazon</td>
+        <td><a href="https://www.amazon.com/gp/product/B08ZJ854Z6/ref=ewc_pr_img_1?smid=A2OAD9ZL8SZ02P&th=1" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+      <tr>
+        <td>100mm Length T8 8mm Dia Lead Screw Rod</td>
+        <td>1</td>
+        <td>$9.99</td>
+        <td>$9.99</td>
+        <td>$0.00</td>
+        <td>Amazon</td>
+        <td><a href="https://www.amazon.com/gp/product/B07QW5N7B2/ref=ewc_pr_img_2?smid=A1THAZDOWP300U&psc=1" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+      <tr>
+        <td>NICE-POWER DC Power Supply</td>
+        <td>1</td>
+        <td>$30.39</td>
+        <td>$30.39</td>
+        <td>$0.00</td>
+        <td>Amazon</td>
+        <td><a href="https://a.co/d/6oQ0Iog" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+      <tr>
+        <td>Cable Sleeve</td>
+        <td>1</td>
+        <td>$8.99</td>
+        <td>$8.99</td>
+        <td>$0.00</td>
+        <td>Amazon</td>
+        <td><a href="https://www.amazon.com/dp/B07FW3GTXB?smid=A2N7NRZ9X3BHHN&ref_=chk_typ_imgToDp&th=1" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+      <tr>
+        <td>Sponge</td>
+        <td>1</td>
+        <td>$2.49</td>
+        <td>$2.49</td>
+        <td>$0.00</td>
+        <td>Roche Bros</td>
+        <td><a href="https://onlineshopping.rochebros.com/products/simply-done-all-purpose-large-sponges/3845195" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td>ordered</td>
+      </tr>
+
+    </tbody>
+  </table>
 </section>
 
 </body>

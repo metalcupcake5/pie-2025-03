@@ -362,3 +362,19 @@ section {
     height: 120px;
   }
 }
+
+/* Mechanical section video */
+.mech-video {
+  margin: 1.5rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.mech-video video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+
