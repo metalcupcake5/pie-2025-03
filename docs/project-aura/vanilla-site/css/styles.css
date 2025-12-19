@@ -11,20 +11,22 @@
 
 /* CSS Custom Properties */
 :root {
-  --color-primary: #2563eb;
-  --color-primary-dark: #1e40af;
-  --color-secondary: #64748b;
-  --color-text: #111827;
-  --color-text-light: #6b7280;
-  --color-text-gray: #4b5563;
-  --color-bg: #ffffff;
-  --color-bg-alt: #f9fafb;
-  --color-bg-gray: #f3f4f6;
-  --color-bg-dark: #111827;
-  --color-border: #e5e7eb;
-  --color-blue-50: #eff6ff;
-  --color-blue-200: #bfdbfe;
-  --color-focus: #2563eb;
+  /* Palette: deep blue-black with cool accents */
+  --color-primary: #4f8cff; /* interactive accent */
+  --color-primary-dark: #3776e6;
+  --color-secondary: #89a3bd;
+  --color-text: #e6eef9; /* off-white with blue tint for readability */
+  --color-text-light: #b7c7d9;
+  --color-text-gray: #93a6bb;
+  --color-bg: #071025; /* deep navy-black */
+  --color-bg-alt: #0b1220; /* slightly lighter panel background */
+  --color-bg-gray: #0f1724; /* card background */
+  --color-bg-dark: #02040a; /* near-black */
+  --color-surface: #081028; /* surfaces previously 'white' */
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-blue-50: rgba(79, 140, 255, 0.06);
+  --color-blue-200: rgba(79, 140, 255, 0.12);
+  --color-focus: #4f8cff;
 
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
@@ -161,7 +163,7 @@ a:focus {
 
 /* Header and Navigation */
 .header {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(7, 16, 37, 0.6); /* dark translucent header */
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
   position: fixed;
@@ -434,7 +436,7 @@ a:focus {
 .btn-outline {
   border: 1px solid var(--color-border);
   color: var(--color-text-gray);
-  background: white;
+  background: var(--color-surface);
   width: 100%;
   padding: var(--spacing-sm) var(--spacing-md);
 }
@@ -446,7 +448,7 @@ a:focus {
 }
 
 .btn-white {
-  background-color: white;
+  background-color: var(--color-surface);
   color: var(--color-text);
   padding: var(--spacing-md) var(--spacing-lg);
 }
@@ -460,7 +462,7 @@ a:focus {
   background: var(--color-bg-gray);
   padding: var(--spacing-2xl);
   border-radius: var(--border-radius);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
 .card-title {
@@ -471,7 +473,7 @@ a:focus {
 /* Team Section */
 .team-section {
   padding: var(--spacing-2xl) 0;
-  background: white;
+  background: var(--color-surface);
   width: 100%;
   box-sizing: border-box;
   margin: 0;
@@ -490,10 +492,10 @@ a:focus {
 }
 
 .team-card {
-  background: white;
+  background: var(--color-surface);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   transition: box-shadow var(--transition);
   width: 100%;
   box-sizing: border-box;
@@ -507,7 +509,7 @@ a:focus {
 }
 
 .team-card:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.6);
 }
 
 .team-avatar {
@@ -568,9 +570,9 @@ a:focus {
 }
 
 .video-container {
-  background: white;
+  background: var(--color-surface);
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   overflow: hidden;
 }
 
@@ -603,7 +605,7 @@ a:focus {
 /* Sections Section */
 .sections-section {
   padding: var(--spacing-2xl) 0;
-  background: white;
+  background: var(--color-surface);
 }
 
 .sections-grid {
@@ -613,17 +615,18 @@ a:focus {
 }
 
 .section-card {
-  background: white;
+  background: var(--color-surface);
   padding: var(--spacing-2xl);
   border-radius: var(--border-radius);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
-  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 
 .section-card:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.7);
+  transform: translateY(-6px);
 }
 
 .section-card-title {
@@ -763,7 +766,7 @@ a:focus {
 .financial-table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
+  background: var(--color-surface);
 }
 
 .financial-table thead {
@@ -897,13 +900,21 @@ a:focus {
 }
 
 .problem-box {
-  background: #fff1f2; /* light red */
-  border-left: 4px solid #ef4444; /* red accent */
+  background: rgba(239, 68, 68, 0.08); /* subtle red tint for dark bg */
+  border-left: 4px solid rgba(239, 68, 68, 0.9); /* red accent */
+  color: var(--color-text);
+  padding: var(--spacing-md);
+  border-radius: calc(var(--border-radius) * 0.9);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
 .solution-box {
-  background: #f0fdf4; /* light green */
-  border-left: 4px solid #10b981; /* green accent */
+  background: rgba(16, 185, 129, 0.06); /* subtle green tint */
+  border-left: 4px solid rgba(16, 185, 129, 0.9); /* green accent */
+  color: var(--color-text);
+  padding: var(--spacing-md);
+  border-radius: calc(var(--border-radius) * 0.9);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
 /* Detail list (clean reset + custom bullet) */
@@ -1170,10 +1181,10 @@ a:focus {
     top: 4rem;
     left: -100%;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--color-surface);
     width: 100%;
     padding: var(--spacing-lg);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     transition: left var(--transition);
     border-bottom: 1px solid var(--color-border);
   }
@@ -1238,15 +1249,16 @@ a:focus {
 }
 
 .solution-box {
-  background-color: #ecfdf5; /* Very light green */
-  border: 1px solid #a7f3d0; /* Green border */
+  background: rgba(16, 185, 129, 0.06); /* subtle green tint for dark theme */
+  border-left: 4px solid rgba(16, 185, 129, 0.9); /* green accent */
   border-radius: var(--border-radius);
   padding: 1rem 1.5rem;
-  color: #065f46; /* Dark green text */
+  color: var(--color-text);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
 .solution-box strong {
-  color: #047857;
+  color: var(--color-primary);
 }
 
 .caption {
