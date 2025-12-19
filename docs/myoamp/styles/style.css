@@ -79,12 +79,11 @@ li {
 }
 
 .point-img {
-  position: absolute;
-  top: 700px;      /* shift up same as flow-img */
-  left: 1400px;      /* adjust horizontal placement to sit next to the box */
-  width: 150px;
-  height: auto;
+  position: relative;
   z-index: 10;
+  border-radius: 20px;
+  width: 500px;
+  transform: translateY(-1200px);
 }
 
 
