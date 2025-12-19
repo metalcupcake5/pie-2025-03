@@ -553,57 +553,202 @@
                     </div>
 
                     <div class="phase-content" id="phase-3">
-                        <h3>Marine Life Conservation</h3>
+                        <h3>
+                            Phase 3: It's Beginning to Look a Lot like Fab Time
+                        </h3>
                         <p>
-                            Protecting endangered marine species through habitat
-                            restoration, breeding programs, and policy advocacy.
-                            Our work spans from microscopic plankton to large
-                            marine mammals, ensuring biodiversity preservation
-                            across all ocean levels.
+                            For this phase, we needed to finalize designs for a
+                            clear path to fabrication and integration.
                         </p>
+                        <br />
 
-                        <div class="phase-stats">
-                            <div class="stat-item">
-                                <span class="number">127</span>
-                                <span class="label">Species Protected</span>
+                        <h4>Mechanical</h4>
+                        <p>
+                            The final iteration of the fish tank began to take
+                            shape in CAD. The size of the tank increased
+                            substantially from the previous phase and while the
+                            floor-moving mechanism was removed, three DC motors
+                            powering different obstacle mechanisms (scotch yoke
+                            and two spinners) were placed instead.
+                        </p>
+                        <br />
+                        <p>
+                            In order to allow access to the bottom layer of
+                            electronics, the structure was planned out such that
+                            the main platform could be removed along with two
+                            structs and half of the railings. Using six struts
+                            not only meant that four struts could be permanently
+                            in place, but also that the scoreboxes could be
+                            permanent attachments directly across from each
+                            other. The dome shape was partially for aesthetics,
+                            and partially to improve game balance; the added
+                            difficulty of fishing through a roof was expected to
+                            alleviate the fact that the fish were highly
+                            magnetic.
+                        </p>
+                        <br />
+                        <div class="horizontal-display" style="height: 350px">
+                            <div class="display">
+                                <img
+                                    style="height: 250px"
+                                    src="/media/img/phase3/phase3_tank_main.png"
+                                />
+                                <p>
+                                    (Top) Isometric view of the tank CAD at this
+                                    point.
+                                </p>
+                                <p>
+                                    (Right) Diagram detailing how struts and
+                                    platform might be removed.
+                                </p>
                             </div>
-                            <div class="stat-item">
-                                <span class="number">45</span>
-                                <span class="label">Breeding Programs</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="number">8</span>
-                                <span class="label">Sanctuaries Created</span>
-                            </div>
+                            <img
+                                style="height: 350px"
+                                src="/media/img/phase3/phase3_struts.jpg"
+                            />
                         </div>
+                        <br />
+                        <div class="display">
+                            <div class="horizontal-display">
+                                <img
+                                    src="/media/img/phase3/phase3_tank_top.png"
+                                />
+                                <img
+                                    src="/media/img/phase3/phase3_tank_toptrans.png"
+                                />
+                            </div>
+                            <p>
+                                Top-down view. Note the two layers made to
+                                accommodate the obstacle motors.
+                            </p>
+                        </div>
+                        <p>
+                            Planning for the score display started during this
+                            phase. The initial design located the score display
+                            on the back of the scoring boxes; however, this
+                            would prevent the opponent from seeing the scores.
+                            We chose to move the score display away from the
+                            score box and planned to mount them to the tank
+                            struts instead.
+                        </p>
+                        <br />
+                        <div class="display">
+                            <img
+                                style="height: 250px"
+                                src="/media/img/phase3/phase3_sketch_scoredisplay.jpg"
+                            />
+                            <p>
+                                Quick sketches of where the LED display might be
+                                mounted.
+                            </p>
+                        </div>
+                        <p>
+                            The score box was also initially intended to close
+                            in response to the placement of a fish using a
+                            distance sensor. However, implementing the distance
+                            sensor in such a cramped space with moving parts in
+                            a manner that wouldn't accidentally trigger in
+                            response to the box but would still detect fish
+                            dropped in. Ultimately, we chose to instead
+                            randomize the opening and closing mechanism of the
+                            scorebox, much like other popular magnetized
+                            tabletop fishing games, which would simplify the
+                            sensor layout.
+                        </p>
+                        <br />
+                        <div class="display">
+                            <div class="horizontal-display">
+                                <img
+                                    src="/media/img/phase3/phase3_scorebox_oldfront.png"
+                                />
+                                <img
+                                    src="/media/img/phase3/phase3_scorebox_oldback.png"
+                                />
+                            </div>
+                            <p>
+                                Initial scorebox design with distance sensor and
+                                score display.
+                            </p>
+                        </div>
+                        <div class="display">
+                            <div class="horizontal-display">
+                                <img
+                                    src="/media/img/phase3/phase3_scorebox_front.png"
+                                />
+                                <img
+                                    src="/media/img/phase3/phase3_scorebox_back.png"
+                                />
+                            </div>
+                            <p>
+                                Front and back views of the updated CAD design.
+                            </p>
+                        </div>
+                        <p>
+                            The fishbot iteration hadn't ended yet, either! At
+                            this point, the team determined that the best course
+                            of action would be to design an internal PLA shell
+                            with an external TPU casing, rather than continue
+                            forward with the full TPU shell. A shift from 3V
+                            coin cell batteries to smaller 1.5V button cell
+                            batteries to save space and weight was made after
+                            determining that there was no noticeable speed
+                            shift, but this meant there needed to be a full
+                            overhaul of the CAD. For this sprint, no new shells
+                            were created, but rigorous testing was done to
+                            determine the next steps.
+                        </p>
+                        <br />
 
-                        <div class="phase-details">
-                            <div class="detail-card">
-                                <h4>Sea Turtle Recovery</h4>
-                                <p>
-                                    Comprehensive protection programs for
-                                    endangered sea turtle species including
-                                    nesting site protection and migration
-                                    tracking.
-                                </p>
+                        <h4>Electrical and Software</h4>
+                        <p>
+                            The focus for electrical and software was on
+                            continuing to work with RFID functionality, now
+                            integrating it with a seven-segment LED display to
+                            show points. Each time an RFID token passed in front
+                            of the sensor, the LED display would change its
+                            display to increment a number.
+                        </p>
+                        <br />
+                        <div class="display">
+                            <div class="horizontal-display">
+                                <img
+                                    src="/media/img/phase3/phase3_electrical_diag.png"
+                                />
+                                <video controls>
+                                    <source
+                                        src="/media/video/phase3/phase3_ssd.mp4"
+                                    />
+                                </video>
                             </div>
-                            <div class="detail-card">
-                                <h4>Whale Migration</h4>
-                                <p>
-                                    Studying and protecting critical migration
-                                    corridors for humpback, blue, and gray
-                                    whales across ocean basins.
-                                </p>
-                            </div>
-                            <div class="detail-card">
-                                <h4>Shark Conservation</h4>
-                                <p>
-                                    Protecting apex predators through fishing
-                                    regulations, sanctuary establishment, and
-                                    public education campaigns.
-                                </p>
-                            </div>
+
+                            <p>
+                                Electrical diagram for the shift register
+                                interfacing an Arduino and a seven-segment
+                                display.
+                            </p>
                         </div>
+                        <div class="display">
+                            <img src="/media/img/phase3/phase3_code1.png" />
+                            <p>Updated directory structure for phase 3.</p>
+                        </div>
+                        <div class="display">
+                            <div class="horizontal-display">
+                                <img src="/media/img/phase3/phase3_code2.png" />
+                                <img src="/media/img/phase3/phase3_code3.png" />
+                            </div>
+                            <p>this sure is code</p>
+                        </div>
+                        <br />
+
+                        <h4>Final Steps</h4>
+                        <p>
+                            We now have the overall structure for how the game
+                            is going to be integrated between subteams. From
+                            here, our main focus is shifting to fabrication and
+                            iterative development to build, test, and refine
+                            each of our components before the final
+                            demonstration day!
+                        </p>
                     </div>
 
                     <div class="phase-content" id="phase-4">
