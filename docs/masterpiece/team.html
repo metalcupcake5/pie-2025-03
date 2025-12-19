@@ -6,34 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    <style>
+      /* Team Photo Background Section */
+      #team-photo-hero {
+        position: relative;
+        height: 200vh; 
+        min-height: 400px;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                    url('images/TeamPhoto.jpeg') no-repeat center center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      #team-photo-hero h2 {
+        font-size: 3em;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      }
+    </style>
   </head>
   <body class="is-preload">
 
-    <!-- Top Nav -->
-<header id="top-nav">
-  <div class="inner">
-    <a href="index.html" class="brand">
-      <img src="images/MasterpieceLogo.jpg" alt="Masterpiece Logo">
-      <span>Masterpiece</span>
-    </a>
+    <header id="top-nav">
+      <div class="inner">
+        <a href="index.html" class="brand">
+          <img src="images/MasterpieceLogo.jpg" alt="Masterpiece Logo">
+          <span>Masterpiece</span>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="button small">Home</a></li>
+            <li><a href="mechanical.html" class="button small">Mechanical</a></li>
+            <li><a href="electrical.html" class="button small">Electrical</a></li>
+            <li><a href="software.html" class="button small">Software &amp; Logic</a></li>
+            <li><a href="timeline.html" class="button small">Timeline</a></li>
+            <li><a href="budget.html" class="button small">Budget</a></li>
+            <li><a href="gallery.html" class="button small">Gallery</a></li>
+            <li><a href="team.html" class="button small">Team</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <nav>
-      <ul>
-        <li><a href="index.html"       class="button small">Home</a></li>
-        <li><a href="mechanical.html"  class="button small">Mechanical</a></li>
-        <li><a href="electrical.html"  class="button small">Electrical</a></li>
-        <li><a href="software.html"    class="button small">Software &amp; Logic</a></li>
-        <li><a href="timeline.html"    class="button small">Timeline</a></li>
-        <li><a href="budget.html"      class="button small">Budget</a></li>
-        <li><a href="gallery.html"        class="button small">Gallery</a></li>
-        <li><a href="team.html"        class="button small">Team</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-    <!-- Page Header -->
     <section id="header">
       <div class="inner">
         <h1>Team</h1>
@@ -41,6 +62,11 @@
       </div>
     </section>
 
+    <section id="team-photo-hero">
+      <div class="inner">
+        <h2>Our Team</h2>
+      </div>
+    </section>
 
     <section class="main style1">
       <div class="container">
@@ -55,7 +81,7 @@
               </h2>
               <p><strong>Major: Electrical and Computer Engineering</strong></p>
             </header>
-            <p>I’m David, a sophomore at Olin. On Masterpiece, I designed and debugged the Hall-sensor + I/O expander electronics (PCBs, I²C wiring, and firmware) and helped integrate the sensing hardware with the rest of the system.</p>
+            <p>I’m David, a sophomore at Olin. [cite_start]On Masterpiece, I designed and debugged the Hall-sensor + I/O expander electronics (PCBs, I²C wiring, and firmware) and helped integrate the sensing hardware with the rest of the system[cite: 22].</p>
           </div>
           <div class="col-6 col-12-medium">
             <span class="image fit"><img src="images/david.jpg" alt="David Bardalez"></span>
@@ -77,7 +103,7 @@
               </h2>
               <p><strong>Major: Mechanical Engineering</strong></p>
             </header>
-            <p>I’m a sophomore Mechanical Engineer at Olin. I managed all aspects of software and much of the gantry control electronics for the Masterpiece project. I focused heavily on integrating the custom internal tracking and path planning with the Stockfish chess engine and Python Chess library.</p>
+            <p>I’m a sophomore Mechanical Engineer at Olin. [cite_start]I managed all aspects of software and gantry control electronics, focusing on integrating internal tracking with the Stockfish chess engine[cite: 22].</p>
           </div>
         </div>
 
@@ -93,7 +119,7 @@
               </h2>
               <p><strong>Major: Mechanical Engineering</strong></p>
             </header>
-            <p>I am Prem, a sophomore Mechanical Engineering student at Olin, class of 2028. I am part of the mechanical subteam for the Masterpiece project. I designed the corner gantry segments, the servo magnet carriage system, the board, and helped design the side panels for the gantry system. I also helped with the assembly of the overall system.</p>
+            <p>I am Prem, a sophomore Mechanical Engineering student. [cite_start]I designed the corner gantry segments, the servo magnet carriage system, and the board, and helped with final assembly[cite: 22].</p>
           </div>
           <div class="col-6 col-12-medium">
             <span class="image fit"><img src="images/Prem2.jpeg" alt="Prem Fedtchenko"></span>
@@ -115,7 +141,7 @@
               </h2>
               <p><strong>Major: Mechanical Engineering</strong></p>
             </header>
-            <p>I am a sophomore mechanical engineer at Olin. On the Masterpiece mechanical subteam, I designed the board mounts. Helped design the board, the tensioners, the magnet carriage, and the side panels. I also helped assemble and integrate the full system.</p>
+            <p>I am a sophomore mechanical engineer at Olin. [cite_start]I designed the board mounts and helped design the tensioners, magnet carriage, and side panels[cite: 22].</p>
           </div>
         </div>
 
@@ -131,7 +157,7 @@
               </h2>
               <p><strong>Major: Mechanical Engineering</strong></p>
             </header>
-            <p>I’m Ananth, a sophomore Mechanical Engineering student at Olin College. On Masterpiece, I helped design, fabricate, and assemble the gantry as well as our pieces and side panels.</p>
+            <p>I’m Ananth, a sophomore Mechanical Engineering student. [cite_start]I helped design, fabricate, and assemble the gantry, our pieces, and the side panels[cite: 22].</p>
           </div>
           <div class="col-6 col-12-medium">
             <span class="image fit"><img src="images/ananth.jpg" alt="Ananth Kutuva"></span>
@@ -140,148 +166,14 @@
 
       </div>
     </section>
-   
-    <!-- <!-- <section class="main style1">
-      <div class="container">
-        <div class="row gtr-150">
-          <div class="col-6 col-12-medium">
-            <header class="major">
-                         <h2>
-    <a href="https://www.linkedin.com/in/david-bardalez-469b3432b/"
-       class="team-link"
-       target="_blank"
-       rel="noopener">
-      <span>David Bardalez</span>
-      <span class="icon brands alt fa-linkedin">
-        <span class="label">LinkedIn</span>
-      </span>
-    </a>
-  </h2>
-            </header>
-            </div>
-            <p>
-                <img src="images/david.jpg" alt="Image of David Bardalez" style="width:400px;height:400px;">
-            </p>
 
-          
-        </div>
-        <hr class="major" />
-
-        <div class="row gtr-150">
-          <div class="col-6 col-12-medium">
-            <header class="major">
-              <h2>
-    <a href="https://www.linkedin.com/in/kieran-erwin/"
-       class="team-link"
-       target="_blank"
-       rel="noopener">
-      <span>Kieran Erwin</span>
-      <span class="icon brands alt fa-linkedin">
-        <span class="label">LinkedIn</span>
-      </span>
-    </a>
-  </h2>
-            </header>
-            <p>
-              
-            </p>
-          </div>
-          <p>
-            <img src="images/kieran.png" alt="Image of Kieran Erwin" style="width:400px;height:400px;">
-          </p>
-        </div>
-
-        <hr class="major" /> -->
-<!-- 
-        <div class="row gtr-150">
-          <div class="col-6 col-12-medium">
-            <header class="major">
-              <h2>
-    <a href="https://www.linkedin.com/in/pfedtchenko/"
-       class="team-link"
-       target="_blank"
-       rel="noopener">
-      <span>Prem Fedtchenko</span>
-      <span class="icon brands alt fa-linkedin">
-        <span class="label">LinkedIn</span>
-      </span>
-    </a>
-  </h2>
-            </header>
-            <p>
-              
-            </p>
-          </div>
-          <p>
-            <img src="images/prem.jpg" alt="Image of Prem Fedtchenko" style="width:400px;height:400px;">
-          </p>
-        </div>
-
-        <hr class="major" />
-
-        <div class="row gtr-150">
-          <div class="col-6 col-12-medium">
-            <header class="major">
-              <h2>
-    <a href="https://www.linkedin.com/in/mehmet-firat-570038314/"
-       class="team-link"
-       target="_blank"
-       rel="noopener">
-      <span>Mehmet Firat</span>
-      <span class="icon brands alt fa-linkedin">
-        <span class="label">LinkedIn</span>
-      </span>
-    </a>
-  </h2>
-            </header>
-            <p>
-              
-            </p>
-          </div>
-          <p>
-            <img src="images/mehmet.jpg" alt="Image of Mehmet Firat" style="width:400px;height:400px;">
-          </p>
-        </div>
-
-        <hr class="major" />
-
-        <div class="row gtr-150">
-          <div class="col-6 col-12-medium">
-            <header class="major">
-              <h2>
-    <a href="https://www.linkedin.com/in/ananth-kutuva/"
-       class="team-link"
-       target="_blank"
-       rel="noopener">
-      <span>Ananth Kutuva</span>
-      <span class="icon brands alt fa-linkedin">
-        <span class="label">LinkedIn</span>
-      </span>
-    </a>
-  </h2>
-            </header>
-            <p>
-              
-            </p>
-          </div>
-          <p>
-            <img src="images/ananth.jpg" alt="Image of Ananth Kutuva" style="width:400px;height:400px;">
-          </p>
-        </div>
-
-      </div>
-    </section>  -->
-
-    <!-- Footer -->
-    <section id="footer">
-
+    <footer id="footer">
       <ul class="copyright">
         <li>&copy; Masterpiece Chessboard</li>
         <li>Template: <a href="https://html5up.net">HTML5 UP – Photon</a></li>
       </ul>
-    </section>
+    </footer>
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
