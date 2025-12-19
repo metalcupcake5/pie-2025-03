@@ -2350,20 +2350,21 @@ input, select, textarea {
 				line-height: 1em;
 			}
 
-/* Image */
 
-	.image {
-		border-radius: 4px;
-		border: 0;
-		display: inline-block;
+/* Header */
+
+	#header {
+		padding: 9em 0 9em 0 ;
+		background-color: #444b4e;
+		color: rgba(255, 255, 255, 0.95);
+		background-image: url("images/david.jpg");
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		overflow: hidden;
 		position: relative;
+		text-align: center;
 	}
-
-		.image img {
-			border-radius: 4px;
-			display: block;
-		}
-
 		.image.left {
 			float: left;
 			padding: 0 1.5em 1em 0;
@@ -2917,13 +2918,18 @@ input, select, textarea {
 		background-color: #444b4e;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+		background-image: url("images/overlay2.png"), url("images/david.jpg");
 		background-position: top left,						center center,					center center;
 		background-size: auto,							cover,							cover;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
 	}
+		/* Ensure text stays above overlay */
+		#header .inner {
+		position: relative;
+		z-index: 2;
+		}
 
 		#header a {
 			border-bottom-color: rgba(255, 255, 255, 0.5);
@@ -3109,13 +3115,14 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		padding: 6em 0 6em 0 ;
-		background-color: #4686a0;
-		color: rgba(255, 255, 255, 0.75);
-		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/overlay2.png"), url("images/overlay4.svg"), linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);
-		background-position: top left,						center center,					center center;
-		background-size: auto,							cover,							cover;
+		padding: 9em 0 9em 0 ;
+		background-color: #444b4e;
+		color: rgba(255, 255, 255, 0.95);
+		/* Single static background image (correct relative path from this CSS file) */
+		background-image: url("../../images/david.jpg");
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
 		text-align: center;
 	}
 
@@ -3890,4 +3897,64 @@ body {
   height: auto;
   display: block;
   margin: 0 auto; 
+}
+
+/* Final override: ensure a single static header image with no overlays */
+#header {
+	background-image: url("/images/david.jpg") !important;
+	background-position: center center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	background-color: transparent !important;
+}
+
+#header:after {
+	display: none !important;
+	background: none !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+}
+
+#header .inner { 
+	z-index: 3 !important;
+	text-align: center !important;
+}
+
+/* Small translucent box around header title text */
+#header .inner > p {
+	display: inline-block !important;
+	background: rgba(0,0,0,0.55) !important;
+	color: #ffffff !important;
+	padding: 0.9rem 1.2rem !important;
+	border-radius: 8px !important;
+	max-width: 90% !important;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.35) !important;
+	line-height: 1.2 !important;
+	font-weight: 300 !important;
+	z-index: 4 !important;
+}
+
+/* Slightly smaller on very small screens */
+@media screen and (max-width: 480px) {
+	#header .inner > p { padding: 0.6rem 0.9rem !important; font-size: 0.95rem !important; }
+}
+
+/* Ensure logo sits above the title box on its own centered line */
+#header .inner .major-logo {
+	display: block !important;
+	margin: 0 auto 1rem auto !important;
+	text-align: center !important;
+}
+
+#header .inner .major-logo img {
+	display: block !important;
+	margin: 0 auto !important;
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+#header .inner > p {
+	display: block !important;
+	margin: 0 auto !important;
+	max-width: 60ch !important;
 }
