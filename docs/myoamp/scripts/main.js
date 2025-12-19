@@ -94,3 +94,51 @@ window.addEventListener('load', () => {
   }
 
   update();
+
+
+const eceSlides = [
+  {
+    img: "Images/powerman.png",
+    text: "The source of MyoAmp’s electrical power comes from a single 5600 mAH 12 Volt rechargeable lithium ion battery. The 12 volt source is split into 3 different voltage lines by buck converters to accommodate for different component requirements..."
+  },
+  {
+    img: "Images/actuator.png",
+    text: "In order to sense muscle contractions we used MyoWare’s V1 Surface ElectroMyography sensors. They work by taking electrical signals from muscles that are generated when the muscles contract..."
+  },
+  {
+    img: "Images/sensor.png",
+    text: "Final slide description here."
+  }
+];
+
+let eceIndex = 0;
+const eceContainer = document.getElementById("ece-slide-container");
+const eceText = document.getElementById("ece-text");
+
+function updateECE() {
+  // clear container
+  eceContainer.innerHTML = "";
+
+  // create new image element
+  const img = document.createElement("img");
+  img.src = eceSlides[eceIndex].img;
+  img.alt = "ECE slide " + (eceIndex + 1);
+  img.width = 600; // optional: keep consistent size
+  eceContainer.appendChild(img);
+
+  // update text
+  eceText.textContent = eceSlides[eceIndex].text;
+}
+
+function nextECE() {
+  eceIndex = (eceIndex + 1) % eceSlides.length;
+  updateECE();
+}
+
+function prevECE() {
+  eceIndex = (eceIndex - 1 + eceSlides.length) % eceSlides.length;
+  updateECE();
+}
+
+// initialize slideshow
+document.addEventListener("DOMContentLoaded", updateECE);
