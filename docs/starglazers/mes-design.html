@@ -73,7 +73,7 @@
 						<li></li>
 					</ul>
 
-					<div class="image decent"><img src="images/System Diagram.jpg" alt="" /></div>
+					<div class="image featured"><img src="images/System Diagram.jpg" alt="" /></div>
 					<header>
 						<h2>Mechanical Design</h2>
 					</header>
@@ -299,14 +299,39 @@
 							<h3>Axial Motor Control</h3>
 						</header>
 						<p>
-							Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet
-							venenatis
-							feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis.
-							Fermentum elit
-							ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada
-							ante
-							egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra
-							magna.
+							Precise control, accurate timing, and support for large loads were our main priorities for
+							our integrated tracking system. Hence, we selected Nema 23s, which are bipolar stepper
+							motors that offer higher torque, power efficiency, and smoother stepping compared to
+							unipolar motors. The pulse and directional terminals of the DM542 Driver are wired to the
+							3.3V logic GPIO pins of the raspberry pi. With the pigpio library leveraging the pi’s
+							hardware timing to generate and send PWM signals to the motors, we were able to circumvent
+							timing jitters and excessive CPU load. Limit switches mounted on either side of the
+							declination motor also prevent collision with the camera lens.
+						</p>
+						<p>
+							A major issue we realized after testing our integrated system was that the motors did not
+							have encoders, so we could never derive the system’s previous or current position. This
+							required us to manually track steps, which obviously proved to be inconvenient and
+							inefficient.
+						</p>
+						<p>
+							The DM542 drivers also require a minimum 5V input for its pulse and direction terminals.
+							Since the GPIO pins of the pi only supply 3.3V, there was not enough of a voltage difference
+							between the highs and lows sent to move the motors both clockwise and counterclockwise. This
+							causes tangling of our wires since the right ascension motor must completely loop around
+							itself to reset to its original position. With more time, we would add another circuit that
+							provides adequate power to these terminals in the motor driver while connecting its logic
+							back to the GPIO pins.
+						</p>
+						<p>
+							Lastly, AC power adapters are used to power the motors since it was the most accessible
+							option for rapid prototyping. If we had a greater budget, we would buy lithium batteries to
+							ensure our system can also be used in remote areas, which are more desirable to avoid light
+							pollution.
+
+							In the future, to make our telescope truly user-friendly, we would implement a wireless
+							bluetooth connection to the raspberry pi that allows users to input the stars they want to
+							track and take pictures remotely from their personal device.
 						</p>
 					</section>
 				</article>
