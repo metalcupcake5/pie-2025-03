@@ -1,0 +1,80 @@
+<!doctype html> <!--helps prevent any issues - runs error checks and stuff -->
+<html lang="en-US"> <!--sets the language as HTML-->
+  <head> <!--this is hidden - keywords-->
+    <link href="styles/style.css" rel="stylesheet" />
+    <meta charset="utf-8" /> <!--allows for most characters and languages-->
+    <meta name="viewport" content="width=device-width" /> <!--sets the size of the page to the device screen/browser window-->
+    <title>My test page</title> <!-- name/word associated with page (ex. what it will be named if favorited)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script async src="scripts/main.js"></script>
+  </head>
+  <body>
+    <section class = "nav-bar">
+      <nav>
+        <ul class = "nav">
+          <a href="index.html">Home</a>
+          <li class="dropdown">
+            <a href = "#"> Systems </a>
+            <ul class = "dropdown-menu">
+              <li><a href = "mechanical_systems.html" class = "components" > Mechanical </a></li>
+              <li><a href = "electrical.html" class = "components" > Electrical </a></li>
+              <li><a href = "firmware.html" class = "components" > Firmware </a></li>
+              <li><a href = "software.html" class = "components" > Software </a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href = "#"> Sprints </a>
+            <ul class = "dropdown-menu">
+              <li><a href="sprint1.html" class="components">Sprint 1</a></li>
+              <li><a href="sprint2.html" class="components">Sprint 2</a></li>
+              <li><a href="sprint3.html" class="components">Sprint 3</a></li>
+            </ul>
+          </li>
+          <a href="billofmaterials.html">Bill of Materials</a>
+          <a href="aboutus.html">About Us</a>
+        </ul>
+      </nav>
+    </section>
+    <section class = "sprint-title">
+        <h1>Sprint 1</h1>
+        <h2>3 weeks</h2>
+    </section>
+    <section class = "summary">
+    <img class = "initial-drawing" src="Images/Screenshot 2025-12-15 184547.png" alt="drawing" />
+     <p>We made a timeline, divulged responsibilities, and created goals for ourselves. We started brainstorming
+       ideas for fabrication and drawing a flow diagram as well. </p>
+    </section>
+
+    <section class="breakdown">
+      
+      <a href="mechanical_systems.html" class="info-box">
+        <h2 class="title">Mechanical</h2>
+        <p class="more">We decided on the placement of the exoskeleton and cable drive. We purchased linear 
+            actuatorsto start working with. Lastly, we drew a sketch of the design, as seen above.
+        </p>
+      </a>
+      <a href="electrical.html" class="info-box">
+        <h2 class="title">Electrical</h2>
+        <p class="more"> We worked on getting initial data via testing sensors. We also researched the 
+            optimal motor driver board that will work with the linear actuators, use PWM at 12 volts, and be 
+            compatible with the pico. 
+        </p>
+      </a>
+      <a href="software.html" class="info-box">
+        <h2 class="title">Software</h2>
+        <p class="more"> Research on which type of machine learning model we want to use. </p>
+      </a>
+      <a href="firmware.html" class="info-box">
+        <h2 class="title">Firmware</h2>
+        <p class="more"> Research on how ML and pico will work together. </p>
+      </a>
+    </section>
+
+    <section class="link">
+         <a href="https://docs.google.com/presentation/d/1-6K91l6RQDU1KCE-amj_nOiuAdTv4pxxWt2YJEYgP7o/edit?slide=id.p#slide=id.p" 
+         class="link">Design Review Slides</a>
+    </section>
+
+  </body>

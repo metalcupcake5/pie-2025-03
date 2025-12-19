@@ -1,0 +1,126 @@
+<!doctype html> <!--helps prevent any issues - runs error checks and stuff -->
+<html lang="en-US"> <!--sets the language as HTML-->
+  <head> <!--this is hidden - keywords-->
+    <link href="styles/style.css" rel="stylesheet" />
+    <meta charset="utf-8" /> <!--allows for most characters and languages-->
+    <meta name="viewport" content="width=device-width" /> <!--sets the size of the page to the device screen/browser window-->
+    <title>My test page</title> <!-- name/word associated with page (ex. what it will be named if favorited)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script async src="scripts/main.js"></script>
+  </head>
+  <body>
+    <section class = "nav-bar">
+      <nav>
+        <ul class = "nav">
+          <a href="index.html">Home</a>
+          <li class="dropdown">
+            <a href = "#"> Systems </a>
+            <ul class = "dropdown-menu">
+              <li><a href = "mechanical_systems.html" class = "components" > Mechanical </a></li>
+              <li><a href = "electrical.html" class = "components" > Electrical </a></li>
+              <li><a href = "firmware.html" class = "components" > Firmware </a></li>
+              <li><a href = "software.html" class = "components" > Software </a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href = "#"> Sprints </a>
+            <ul class = "dropdown-menu">
+              <li><a href="sprint1.html" class="components">Sprint 1</a></li>
+              <li><a href="sprint2.html" class="components">Sprint 2</a></li>
+              <li><a href="sprint3.html" class="components">Sprint 3</a></li>
+            </ul>
+          </li>
+          <a href="billofmaterials.html">Bill of Materials</a>
+          <a href="aboutus.html">About Us</a>
+        </ul>
+      </nav>
+    </section>
+
+    <section class = "top-pics">
+
+      
+      <h2>Bill of Materials </h2>
+
+      <img class = "topleft" src="Images/Screenshot_2025-12-15_122255-removebg-preview.png" alt="topleft" />
+      <img class = "topright" src="Images/rightup.png" alt = "topright" />
+  
+      
+    </section>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Supplier</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+      </tr>
+      <tr>
+        <td>Linear Actuator</td>
+        <td>Amazon</td>
+        <td>$30.07</td>
+        <td>3</td>
+        <td>$90.21</td>
+      </tr>
+      <tr>
+        <td>Motor Driver Board</td>
+        <td>SparkFun</td>
+        <td>$14.77</td>
+        <td>2</td>
+        <td>$29.54</td>
+      </tr>
+      <tr>
+        <td>Sensors</td>
+        <td>Olin (free)</td>
+        <td>$37.95</td>
+        <td>3</td>
+        <td>$113.85</td>
+      </tr>
+      <tr>
+        <td>Raspberry Pi Pico</td>
+        <td>Amazon</td>
+        <td>$11.39</td>
+        <td>1</td>
+        <td>$11.39</td>
+      </tr>
+      <tr>
+        <td>Satin Nylon Cord</td>
+        <td>Amazon</td>
+        <td>$7.99</td>
+        <td>1</td>
+        <td>$7.99</td>
+      </tr>
+      <tr>
+        <td>Neoprene Rubber Strips</td>
+        <td>Amazon</td>
+        <td>$17.99</td>
+        <td>1</td>
+        <td>$17.99</td>
+      </tr>
+      <tr>
+        <td>Gloves</td>
+        <td>Amazon</td>
+        <td>$14.99</td>
+        <td>1</td>
+        <td>$14.99</td>
+      </tr>
+      <tr>
+        <td>Hook and Loop Tape</td>
+        <td>Amazon</td>
+        <td>$12.99</td>
+        <td>1</td>
+        <td>$12.99</td>
+      </tr>
+    </table>
+
+    <img class = "bottom" src="Images/bottom.png" alt = "bottom" />
+    <section class="total">
+      <h2>Grand Total: </h2>
+      <p> $298.96 </p>
+    </section>
+    <section class = "extra"> 
+      <p>Shipping and Tax: $28.93 </p>
+    </section>
+
+  </body>
