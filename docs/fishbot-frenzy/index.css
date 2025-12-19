@@ -412,9 +412,17 @@ nav ul a.active::after {
 }
 
 /* Sections */
-section {
+section#timeline {
     padding: 120px 50px;
-    max-width: 1200px;
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+section#subteams {
+    padding: 120px 50px;
+    max-width: 70%;
     margin: 0 auto;
     position: relative;
     z-index: 2;
@@ -1543,6 +1551,7 @@ footer::before {
     flex-direction: column;
     align-items: center;
     margin-bottom: 1em;
+    gap: 10px;
 }
 
 .horizontal-display {

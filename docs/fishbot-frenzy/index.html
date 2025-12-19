@@ -361,57 +361,176 @@
                     </div>
 
                     <div class="phase-content" id="phase-2">
-                        <h3>Deep Ocean Mapping</h3>
+                        <h3>Ramping Things Up</h3>
                         <p>
-                            Comprehensive mapping and exploration of deep-sea
-                            environments using advanced sonar systems, ROVs, and
-                            autonomous underwater vehicles. Our research reveals
-                            previously unknown ecosystems and helps establish
-                            marine protected areas in critical deep-sea
-                            habitats.
+                            This phase was focused on enhancing functionality
+                            and aesthetics of different parts of our project,
+                            along with limited amounts of integration.
                         </p>
+                        <br />
 
-                        <div class="phase-stats">
-                            <div class="stat-item">
-                                <span class="number">12,500</span>
-                                <span class="label">km² Mapped</span>
+                        <h4>Mechanical</h4>
+                        <p>
+                            The mechanical subteam's goal was to increase the
+                            complexity of the tank and score box, and to further
+                            iterate upon the fishbot shells.
+                        </p>
+                        <br />
+
+                        <p>
+                            This iteration of the tank was designed to be
+                            multilevel, with a DC motor rotating a central
+                            platform. Due to a lack of testing, the ramp was too
+                            steep and the upper level was too narrow for the
+                            fishbots to navigate; however, as a proof of concept
+                            of complexity and potential for a tiered tank
+                            design, it was successful!
+                        </p>
+                        <br />
+                        <div class="display">
+                            <div class="horizontal-display">
+                                <img
+                                    src="/media/img/phase2/phase2_tank_cad.png"
+                                />
+                                <img
+                                    src="/media/img/phase2/phase2_tank_prototype.JPG"
+                                />
+                                <img
+                                    src="/media/img/phase2/phase2_tank_prototype_side.JPG"
+                                />
                             </div>
-                            <div class="stat-item">
-                                <span class="number">847</span>
-                                <span class="label">Dive Hours</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="number">34</span>
-                                <span class="label">New Species</span>
-                            </div>
+                            <p>Tank CAD and physical prototype</p>
                         </div>
 
-                        <div class="phase-details">
-                            <div class="detail-card">
-                                <h4>Mariana Trench</h4>
-                                <p>
-                                    Exploring the deepest parts of Earth's
-                                    oceans, documenting extremophile communities
-                                    and their unique adaptations.
-                                </p>
+                        <p>
+                            The scorebox design was changed to mimic a large
+                            fish consuming the fishbot. While the design did not
+                            include the tunnel that would lead the fish back to
+                            the main tank nor any object detection, it was a
+                            successful proof of concept for a geared chomping
+                            mechanism. An SG90 Micro Servo Motor drove the spur
+                            gears that moved the jaws.
+                        </p>
+                        <br />
+                        <div class="display">
+                            <div class="horizontal-display">
+                                <img
+                                    src="/media/img/phase2/phase2_scorebox_front.png"
+                                />
+                                <img
+                                    src="/media/img/phase2/phase2_scorebox_back.png"
+                                />
+                                <img src="/media/img/phase2/phase2_servo.png" />
                             </div>
-                            <div class="detail-card">
-                                <h4>Hydrothermal Vents</h4>
-                                <p>
-                                    Studying chemosynthetic ecosystems around
-                                    underwater volcanic vents and their role in
-                                    ocean chemistry.
-                                </p>
-                            </div>
-                            <div class="detail-card">
-                                <h4>Seamount Surveys</h4>
-                                <p>
-                                    Mapping underwater mountains and their
-                                    endemic species, crucial for deep-sea
-                                    conservation efforts.
-                                </p>
-                            </div>
+                            <p>Scorebox and servo CAD</p>
                         </div>
+                        <div class="display">
+                            <div class="horizontal-display">
+                                <img
+                                    src="/media/img/phase2/phase2_scorebox_prototyp.jpg"
+                                />
+                            </div>
+                            <video controls style="height: 500px">
+                                <source
+                                    src="/media/video/phase2/phase2_scorebox_prototype.mp4"
+                                />
+                            </video>
+                            <p>Scorebox prototype</p>
+                        </div>
+
+                        <p>
+                            Finally, for the fishbots, we were able to create
+                            three different fishbots! We tested out different
+                            body shapes and different materials, including PLA
+                            and TPU. A eucaboard topper for aesthetics was
+                            considered but decided against due to the increased
+                            weight.
+                        </p>
+                        <br />
+
+                        <div class="display">
+                            <div class="horizontal-display">
+                                <div class="display">
+                                    <img
+                                        style="max-height: 200px"
+                                        src="/media/img/phase2/phase2_shell2.png"
+                                    />
+                                    <p>
+                                        Straight-legged fishbot (shell #2) CAD.
+                                    </p>
+                                </div>
+                                <div class="display">
+                                    <img
+                                        style="max-height: 200px"
+                                        src="/media/img/phase2/phase2_fishtopper.png"
+                                    />
+                                    <p>
+                                        A ⅛" fish topper designed to be cut from
+                                        eucaboard.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="horizontal-display">
+                                <img
+                                    src="/media/img/phase2/phase2_shell5.png"
+                                />
+                                <img
+                                    src="/media/img/phase2/phase2_fishbot_photo1.png"
+                                />
+                            </div>
+                            <p>
+                                A fishbot with legs tilted to 25° and
+                                better-designed motor casing (shell #5).
+                            </p>
+                        </div>
+                        <br />
+
+                        <h4>Electrical/Software</h4>
+                        <p>
+                            The main goal for electrical and software during
+                            this phase was to test RFID sensing. Unlike a simple
+                            distance sensor, RFID would allow us to assign
+                            different points to unique fish bots.
+                        </p>
+                        <br />
+
+                        <div class="display">
+                            <img src="/media/img/phase2/phase2_rfid.png" />
+                            <p>RFID sensor and chip.</p>
+                        </div>
+                        <p>
+                            The software successfully integrated with the
+                            scorebox; the opening and closing jaws were limited
+                            in software rather than in hardware. Electrical also
+                            began working directly with mechanical to improve
+                            fishbot wiring.
+                        </p>
+                        <br />
+
+                        <h2>Next Steps</h2>
+                        <p>
+                            Many challenges presented themselves during this
+                            phase. The tank needed to be rethought; the ramp
+                            didn't work, the paths were too narrow, and the
+                            square shape didn't work particularly well. The
+                            scorebox didn't fit any fish inside, had no tank
+                            connection (tunnel) designed, and had no plan for
+                            integrating with RFID. Our next steps included:
+                        </p>
+                        <ol>
+                            <li>
+                                Making a tunnel to connect the score box and
+                                tank
+                            </li>
+                            <li>Planning the RFID sensor mount</li>
+                            <li>
+                                Integrating a score display outside of the
+                                Arduino IDE Serial Monitor Output
+                            </li>
+                            <li>
+                                Determine how the score box would open and close
+                            </li>
+                        </ol>
                     </div>
 
                     <div class="phase-content" id="phase-3">
