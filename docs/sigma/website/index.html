@@ -16,6 +16,7 @@
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/Logo_edited.png" alt="" /></span>
 						<h1>Sigma Machine</h1>
+						<h2 style="color:white; margin-top:0.5em; font-size:2em;">Enigma M3</h2>
 						<p style="color:white;">A modernized take on the Enigma M3 Machine used in WWII to encrypt and decrypt messages.<br/>
 						built by: 
 						<a href="https://www.linkedin.com/in/anna-luiza-reis-braun-3aa9a9334/">Anna Braun</a>, 
@@ -24,7 +25,7 @@
 						<a href="https://www.linkedin.com/in/leo-trepte-08b380357/">Leo Trepte</a>, 
 						<a href="https://www.linkedin.com/in/tchenzie-guichette-976319394/">Tchenzie Guichette</a></p>
 						<figure style="margin-top: 1em;">
-						    <img src="images/keyboard side view.jpg" alt="Keys Installed" style="width: 100%; max-width: 800px;" />
+						    <img src="images/finger.jpg" alt="Keys Installed" style="width: 100%; max-width: 800px;" />
 						</figure>
 					</header>
 
@@ -48,7 +49,7 @@
 						<!-- Introduction -->
 						<section id="intro" class="main">
 						    <header class="major">
-						        <h2>Enigma M3</h2>
+						        <h2 style="text-align:center;">Enigma M3</h2>
 						    </header>
 						    
 						    <div class="spotlight equal">
@@ -106,11 +107,11 @@
 						    <div class="spotlight">
 						        <span class="image">
 						            <figure>
-						                <img src="images/n1.png" alt="Rotor 1" />
+						                <img src="images/d1.jpg" alt="Rotor 1" />
 						                <figcaption>Exploded drawing of a rotor.</figcaption>
 						            </figure>
 						            <figure style="margin-top: 1em;">
-						                <img src="images/n2.png" alt="Rotor 2" />
+						                <img src="images/d2.jpg" alt="Rotor 2" />
 						                <figcaption>Transmission and receptor side drawings of a rotor.</figcaption>
 						            </figure>
 						            <figure style="margin-top: 1em;">
@@ -202,20 +203,20 @@
 						        <div class="content">
 						            <h3><strong>Data & Energy Flow Diagram</strong></h3>
 								</div>
-						        <figure style="text-align: center; margin-top: 2em;">
+						        <figure style="text-align: center; margin-top: 2em; margin-bottom: 4em;">
 						            <img src="images/flow.png" alt="Data & Energy Flow Diagram" style="max-width: 100%; border-radius: 8px;" />
 						            <figcaption>Data & Energy Flow Diagram for the entire Enigma Machine.</figcaption>
 						        </figure>
 						    </div>
 						    
 						    <div class="content">
-						        <h3>Sprint 1</h3>
+						        <h3><strong>Sprint 1</strong></h3>
 						        <p>For the first sprint, we got all of the CAD done. We also were able to produce a prototype of one rotor, as well as purchasing materials and getting started on the keys.</p>
 						        
-						        <h3>Sprint 2</h3>
+						        <h3><strong>Sprint 2</strong></h3>
 						        <p>By the end of the second sprint, we had a prototype keyboard, a plan for the plugboard, modified parts for the rotors, and had created one finalized rotor. We also were halfway done with the reflector.</p>
 						        
-						        <h3>Sprint 3</h3>
+						        <h3><strong>Sprint 3</strong></h3>
 						        <p>For the third sprint review, we had completed the individual keyboard parts, laser-cut the case, CADed the plugboard, and finished all the rotors. We also designed the ratchet system.</p>
 						    </div>
 						    
@@ -227,10 +228,10 @@
 						        <h2>Mechanical</h2>
 						    </header>
 						    
-						    <!-- Rotors (text left, images right) -->
+						    <!-- Rotors -->
 						    <div class="spotlight">
 						        <div class="content">
-						            <h3>Rotors</h3>
+						            <h3><strong>Rotors</strong></h3>
 						            <p>Each rotor is a nine-part mechanical assembly that rotates as a single unit to maintain precise alignment of the electrical contact pins. The rotor body acts as the main structural element, concentrically locating all components along the axis. A toleranced bushing between the shaft and rotor body reduces friction while ensuring accurate alignment during rotation.</p>
 
 									<p>All parts were dimensioned and toleranced for FDM Stratasys printing to ensure consistent fits across assemblies. Press fits are used where alignment is critical, while threaded fasteners allow disassembly and adjustment where needed.</p>
@@ -265,7 +266,7 @@
 						        </span>
 						    </div>
 						    
-						    <!-- Keyboard (images left, text right) -->
+						    <!-- Keyboard -->
 						    <div class="spotlight">
 						        <span class="image">
 						            <figure>
@@ -282,7 +283,7 @@
 						            </figure>
 						        </span>
 						        <div class="content">
-						            <h3>Keyboard</h3>
+						            <h3><strong>Keyboard</strong></h3>
 						            <p>The keyboard design borrows from the original Enigma Machine. It uses spring-loaded metal rods topped with labeled key-caps. In our machine, when a letter is pressed, the key press completes a circuit on the breadboard, which is then sent to the Arduino. We chose to route keypresses to the Arduino for a specific reason: when the Arduino receives a signal for the swapped letter, both the pin corresponding to the keypress and the pin corresponding to the swapped letter will read high. By sending the keyboard press to the Arduino first, it can differentiate between the two, allowing it to send the swapped letter—and not the keypress—to the display.</p>
 
 									<p>For the body of the key, we purchased a 6-foot length of cold-worked steel with a diameter of 3/16 inches and cut it to length using a horizontal bandsaw. We selected springs with a length of 1 inch and an inner diameter of 0.192 inches to fit around the steel rods. The tabs, keycaps, and brackets were 3D printed in PLA.</p>
@@ -291,10 +292,10 @@
 								</div>
 						    </div>
 
-						    <!-- Case (text left, images right) -->
+						    <!-- Case -->
 						    <div class="spotlight">
 						        <div class="content">
-						            <h3>Case</h3>
+						            <h3><strong>Case</strong></h3>
 						            <p>The case was designed early on in the process. This allowed it to evolve as we designed the internal components. We used parametric CAD in Onshape with variables for length, width, height, and wall thickness to facilitate iterations. Additional features like slots for keyboard integration and the ratchet system were added as needed. Once the design was nearly final, tolerances for laser cutter kerf were applied, and the acrylic pieces were assembled using solvent welding.</p>
 						            <p>In the final build, one wall had minor fit issues due to a slightly misaligned reflector plate. We chose not to disassemble and fix it at that stage since the system was functional. Future iterations would address this, as well as tightening the shaft hole tolerance to account for threading reducing the shaft diameter.</p>
 						        </div>
@@ -321,8 +322,12 @@
 						        </div>
 						        <span class="image">
 						            <figure>
-						                <img src="images/switch_components.JPG" alt="Keyboard electrical close-up" />
-						                <figcaption>Keyboard switches mass-produced.</figcaption>
+						                <img src="images/keyboard_electrical1.jpg" alt="Keyboard electrical close-up" />
+						                <figcaption>Keyboard switch mechanism (placeholder).</figcaption>
+						            </figure>
+						            <figure style="margin-top: 1em;">
+						                <img src="images/keyboard_electrical2.jpg" alt="Keyboard wiring" />
+						                <figcaption>Keyboard wiring to breadboard (placeholder).</figcaption>
 						            </figure>
 						        </span>
 						    </div>
@@ -330,9 +335,13 @@
 						    <!-- Rotors and Reflector -->
 						    <div class="spotlight">
 						        <span class="image">
+						            <figure>
+						                <img src="images/rotors_electrical1.jpg" alt="Rotor contacts" />
+						                <figcaption>Rotor spring-pin contacts (placeholder).</figcaption>
+						            </figure>
 						            <figure style="margin-top: 1em;">
-						                <img src="images/openr.jpeg" alt="Reflector wiring" />
-						                <figcaption>Rotors right before getting scrambled.</figcaption>
+						                <img src="images/reflector_electrical.jpg" alt="Reflector wiring" />
+						                <figcaption>Reflector pairing (placeholder).</figcaption>
 						            </figure>
 						        </span>
 						        <div class="content">
@@ -349,8 +358,8 @@
 						        </div>
 						        <span class="image">
 						            <figure>
-						                <img src="images/circuits.png" alt="Plugboard swaps" />
-						                <figcaption>Plugboard schematic using 2 circuits.).</figcaption>
+						                <img src="images/plugboard_electrical.jpg" alt="Plugboard swaps" />
+						                <figcaption>Plugboard with example swaps (placeholder).</figcaption>
 						            </figure>
 						        </span>
 						    </div>
@@ -363,23 +372,20 @@
 						        <h2>Software</h2>
 						    </header>
 						    
-						    <div class="content">
+						    <div class="content" style="text-align: center;">
 						        <p>The following software includes 3 parts. The code for the Arduino which takes in a letter and outputs the corresponding pin (as demonstrated in the system diagram). The Raspi code uses a simple setup that listens for the output from the Arduino through its serial port and outputs it to the Thonny terminal. For a more aesthetic display, we installed Putty, a common terminal emulator for the Raspberry Pi. The code can be read below for more information.</p>
 						        
 						        <h3>Github Source Code:</h3>
-						        <ul>
-						            <li>README: <a href="https://github.com/Tchenzie/pie-2025-03/blob/main/docs/sigma/pie_final_code/enigma_code_README.md">enigma_code_README.md</a></li>
-						            <li>Arduino MEGA Code: <a href="https://github.com/Tchenzie/pie-2025-03/blob/main/docs/sigma/pie_final_code/pie_final_current.ino">pie_final_current.ino</a></li>
-						            <li>RasPi Code: <a href="https://github.com/Tchenzie/pie-2025-03/blob/main/docs/sigma/pie_final_code/enigma_machine_display.py">enigma_machine_display.py</a></li>
-						        </ul>
-						    </div>
-						    
-						    <div class="spotlight">
-						        <span class="image">
-						            <figure>
-						                <img src="images/finger.jpg" alt="Arduino code screenshot" />
-						            </figure>
-						        </span>
+						        <p>
+						            ReadMe: <a href="https://github.com/Tchenzie/pie-2025-03/blob/main/docs/sigma/pie_final_code/enigma_code_README.md">enigma_code_README.md</a><br/>
+						            Arduino MEGA Code: <a href="https://github.com/Tchenzie/pie-2025-03/blob/main/docs/sigma/pie_final_code/pie_final_current.ino">pie_final_current.ino</a><br/>
+						            Raspi Code: <a href="https://github.com/Tchenzie/pie-2025-03/blob/main/docs/sigma/pie_final_code/enigma_machine_display.py">enigma_machine_display.py</a>
+						        </p>
+						        
+						        <figure style="margin-top: 3em;">
+						            <img src="images/keyboard side view.jpg" alt="Arduino code screenshot" style="max-width: 100%; border-radius: 8px;" />
+						            <figcaption>Arduino and keyboard interaction.</figcaption>
+						        </figure>
 						    </div>
 						    
 						</section>
@@ -477,7 +483,7 @@
 						        </table>
 						    </div>
 						    <div class="content" style="margin-top: 2em;">
-						        <p>The total listed cost of the machine is approximately $290. However, many items (such as aluminum scrap, some wiring, microcontrollers, and tools) were found in the shop, already owned, or sourced from scrap bins, bringing our actual out-of-pocket cost closer to $235—well within our $250 budget.</p>
+						        <p>The total listed cost of the machine is approximately $290. However, many items (such as aluminum scrap, some wiring, and tools) were found in the shop, already owned, or sourced from scrap bins, bringing our actual out-of-pocket cost closer to $235—well within our $250 budget.</p>
 						    </div>
 						</section>
 
@@ -486,65 +492,65 @@
 						    <header class="major">
 						        <h2>About Us</h2>
 						    </header>
+
 						    <div class="content">
 						        <p>We are a team of five Olin College of Engineering students who built the Sigma Machine for the Fall 2025 Principles of Integrated Engineering (PIE) course.</p>
+						        <p style="font-weight: bold; margin-top: 1.5em;">Feel free to connect with us on LinkedIn or ask us any questions!</p>
 						    </div>
 						    
-						    <div style="max-width: 1200px; margin: 3em auto 0;">
-						        <!-- Top row: 3 members -->
-						        <div style="display: flex; justify-content: center; gap: 4em; margin-bottom: 4em;">
-						            <article style="text-align: center;">
-						                <a href="https://www.linkedin.com/in/anna-luiza-reis-braun-3aa9a9334/" class="image">
-						                    <img src="images/anna.jpeg" alt="Anna Braun" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto;" />
-						                </a>
-						                <div class="content">
-						                    <h3>Anna Braun</h3>
-						                    <p>Mechanical Engineering</p>
-						                </div>
-						            </article>
-						            <article style="text-align: center;">
-						                <a href="https://www.linkedin.com/in/jowita-walkup/" class="image">
-						                    <img src="images/jo_headshot.jpg" alt="Jo Walkup" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto;" />
-						                </a>
-						                <div class="content">
-						                    <h3>Jo Walkup</h3>
-						                    <p>Mechanical Engineering</p>
-						                </div>
-						            </article>
-						            <article style="text-align: center;">
-						                <a href="https://www.linkedin.com/in/kuhu-jayaswal/" class="image">
-						                    <img src="images/kuhu.jpeg" alt="Kuhu Jayaswal" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto;" />
-						                </a>
-						                <div class="content">
-						                    <h3>Kuhu Jayaswal</h3>
-						                    <p>Electrical & Computer Engineering</p>
-						                </div>
-						            </article>
-						        </div>
-						        
-						        <!-- Bottom row: 2 members -->
-						        <div style="display: flex; justify-content: center; gap: 4em;">
-						            <article style="text-align: center;">
-						                <a href="https://www.linkedin.com/in/leo-trepte-08b380357/" class="image">
-						                    <img src="images/LeoHeadshot.jpg" alt="Leo Trepte" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto;" />
-						                </a>
-						                <div class="content">
-						                    <h3>Leo Trepte</h3>
-						                    <p>Mechanical Engineering</p>
-						                </div>
-						            </article>
-						            <article style="text-align: center;">
-						                <a href="https://www.linkedin.com/in/tchenzie-guichette-976319394/" class="image">
-						                    <img src="images/tch.jpeg" alt="Tchenzie Guichette" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto;" />
-						                </a>
-						                <div class="content">
-						                    <h3>Tchenzie Guichette</h3>
-						                    <p>Engineering: Robotics</p>
-						                </div>
-						            </article>
-						        </div>
+						    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2em; margin-top: 3em;">
+						        <article style="flex: 1 1 180px; max-width: 220px; text-align: center;">
+						            <a href="https://www.linkedin.com/in/anna-luiza-reis-braun-3aa9a9334/" class="image">
+						                <img src="images/anna.jpeg" alt="Anna Braun" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto;" />
+						            </a>
+						            <div class="content">
+						                <h3>Anna Braun</h3>
+						                <p>Mechanical Engineering</p>
+						            </div>
+						        </article>
+						        <article style="flex: 1 1 180px; max-width: 220px; text-align: center;">
+						            <a href="https://www.linkedin.com/in/jowita-walkup/" class="image">
+						                <img src="images/jo_headshot.jpg" alt="Jo Walkup" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto;" />
+						            </a>
+						            <div class="content">
+						                <h3>Jo Walkup</h3>
+						                <p>Mechanical Engineering</p>
+						            </div>
+						        </article>
+						        <article style="flex: 1 1 180px; max-width: 220px; text-align: center;">
+						            <a href="https://www.linkedin.com/in/kuhu-jayaswal/" class="image">
+						                <img src="images/kuhu.jpeg" alt="Kuhu Jayaswal" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto;" />
+						            </a>
+						            <div class="content">
+						                <h3>Kuhu Jayaswal</h3>
+						                <p>Electrical & Computer Engineering</p>
+						            </div>
+						        </article>
+						        <article style="flex: 1 1 180px; max-width: 220px; text-align: center;">
+						            <a href="https://www.linkedin.com/in/leo-trepte-08b380357/" class="image">
+						                <img src="images/LeoHeadshot.jpg" alt="Leo Trepte" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto;" />
+						            </a>
+						            <div class="content">
+						                <h3>Leo Trepte</h3>
+						                <p>Mechanical Engineering</p>
+						            </div>
+						        </article>
+						        <article style="flex: 1 1 180px; max-width: 220px; text-align: center;">
+						            <a href="https://www.linkedin.com/in/tchenzie-guichette-976319394/" class="image">
+						                <img src="images/tch.jpeg" alt="Tchenzie Guichette" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto;" />
+						            </a>
+						            <div class="content">
+						                <h3>Tchenzie Guichette</h3>
+						                <p>Engineering: Robotics</p>
+						            </div>
+						        </article>
 						    </div>
+						    
 						</section>
+
+					</div>
+
+			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -557,4 +563,3 @@
 
 	</body>
 </html>
-
