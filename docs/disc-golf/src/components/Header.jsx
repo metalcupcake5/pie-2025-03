@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 function Header() {
   const [scrolled, setScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -52,13 +53,52 @@ function Header() {
 
         {/* Mobile menu button */}
         <div className="md:hidden">
-          <button className="text-stone-900 p-2">
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-stone-900 p-2"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
+
+      {/* Mobile menu dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-[#F9F8F4]/95 backdrop-blur-md border-t border-stone-200">
+          <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
+            <NavLink to="/" className={navLinkClass} onClick={() => setMobileMenuOpen(false)}>
+              Home
+            </NavLink>
+            <NavLink to="/team" className={navLinkClass} onClick={() => setMobileMenuOpen(false)}>
+              Team
+            </NavLink>
+            <NavLink to="/design" className={navLinkClass} onClick={() => setMobileMenuOpen(false)}>
+              Design
+            </NavLink>
+            <NavLink to="/process" className={navLinkClass} onClick={() => setMobileMenuOpen(false)}>
+              Process
+            </NavLink>
+            <NavLink to="/budget" className={navLinkClass} onClick={() => setMobileMenuOpen(false)}>
+              Budget
+            </NavLink>
+            <NavLink to="/learnings" className={navLinkClass} onClick={() => setMobileMenuOpen(false)}>
+              Learnings
+            </NavLink>
+            <NavLink to="/code" className={navLinkClass} onClick={() => setMobileMenuOpen(false)}>
+              Docs
+            </NavLink>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
