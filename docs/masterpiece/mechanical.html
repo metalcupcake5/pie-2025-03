@@ -57,6 +57,17 @@
             <p>
               Mounted on top of the gantry is the chessboard itself, made from a ⅛ inch thick sheet of plywood. The board is laser-cut to distinguish each of the 120 squares as well as the white and black squares. We added a black and white border around the entire playing field to visually separate the board from the squares. This piece also served as a reinforcement for the board, keeping it from bowing under the weight of the PCBs, and concealing all the mounting screws.
             </p>
+            
+            <span class="image fit">
+                <img
+                  src="images/mechanical0.jpg"
+                  alt="End effector and magnet carriage"
+                  style="width:40% !important; height:auto; display:block; margin:0 auto;"
+                />
+              </span>
+              <p style="text-align:center;">
+                Initial sketch
+              </p> 
           </div>
 
         <hr class="major" />
@@ -223,6 +234,10 @@
           <p>
                 Our initial gantry idea consisted mostly of found parts around campus, such as the cylindrical linear rails, but we decided to buy a thinner and lighter linear rail since the cylindrical linear rails weighed a lot, and having two would cause us to have a heavy chessboard. Furthermore, these linear rails did not come with linear bearings, which were also very large. Because of this, we bought two 600mm MGN12H linear rails for our Y-axis and one 500mm MGN12H linear rail for our X-axis. Another change we made is that we moved our X-axis linear rails to be on the side of the aluminum extrusion rather than the top, as this would allow us to clamp the belts to the linear rail carriage, and hence restrain it easily. Also, the magnet system would be easier to implement if we did not have to worry about the board height; furthermore, we could easily extend the gantry range by simply adding a spacer block, which we had to do to maintain the needed range.
           </p>
+
+          <p>
+            Continuing on design work, we designed the motor, idler pulley, and X-axis mounts. The locations of our pulleys were very critical and tied together all of these components due to our previous constraint that the belts along the Y-axis needed to be parallel to it. Starting with a rough sketch of the belt path in CAD, we were able to confirm these pulley locations and begin modeling.
+          </p>
           </div>
 
         <hr class="major" />
@@ -251,7 +266,20 @@
               We decided that a rack and pinion system would be best, as it would be space-efficient, and its motion would be easily repeatable. We designed the servo horn to be easily press-fit into the pinion and held tightly in place by the servo screw. The rack design had to have a curve to it to ensure that the magnet remained centered on the carriage. The servo assembly would be bolted to the belt retaining system
             </p>
 
-
+            <span class="image fit">
+                <img
+                  src="images/mechanical13.jpg"
+                  alt="End effector and magnet carriage"
+                  style="width:50% !important; height:auto; display:block; margin:0 auto;"
+                />
+              </span>
+              <span class="image fit">
+                <img
+                  src="images/mechanical14.jpg"
+                  alt="End effector and magnet carriage"
+                  style="width:20% !important; height:auto; display:block; margin:0 auto;"
+                />
+              </span>
             <span class="image fit">
                 <img
                   src="images/mechanical5.jpg"
@@ -259,6 +287,9 @@
                   style="width:50% !important; height:auto; display:block; margin:0 auto;"
                 />
               </span>
+              <p style="text-align:center;">
+                Our final end effector assembly
+              </p> 
           </div>
         </div>
 
@@ -272,7 +303,7 @@
             </header>
 
             <p>
-              When designing a belt system, the most important component is the tensioner, which is because it is very difficult to predict the exact length of the stretched belt, and also belts stretch over time. Having a loose belt causes inaccuracies in the final movement end effector and slippage on the drive pulley. Our initial belt-tensioning system consisted of adjustable motor mounts (shown below on the left) and a small tensioner to fine-tune the tensioning (shown below on the right). 	 
+When designing a belt system, the most important component is the tensioner, which is because it is very difficult to predict the exact length of the belt we need. Having a loose belt causes inaccuracies in the final movement end effector and slippage on the drive pulley. Our initial belt-tensioning system consisted of adjustable motor mounts (shown below on the left) and a small tensioner to fine-tune the tensioning (shown below on the right in the center of the extrusion). 	 
             </p>
 
             <div style="display:flex; gap:16px; justify-content:center; align-items:flex-start;">
@@ -293,10 +324,10 @@
               </span>
             </div>
             <p>
-              The issue was that we could not tighten the belts properly; even when we tightened the belts as much as we could using the motor tensioner, and barely slipped the belt back on the pulley, the small tensioner was still not enough to properly tension the belts. This caused us to create three tensioners for the belt, two on the corners opposite the motors and the same one in the middle.
+The issue we ran into was that we could not tighten the belts properly. We tightened the belts as much as we could using the motor tensioner, and barely slipped the belt back on the pulley but the small tensioner couldn’t pull the belt to properly apply tension. Instead, we decided to create three tensioners for the belt, two on the corners opposite the motors, and kept the same one in the middle.
             </p>
             <p>
-              Having a tensioner governed by a screw and a nut was far more ideal, as it would allow for easier tensioning since it could be easily adjusted, and the high mechanical advantage offered by the screw and the nut allowed us more control over the belt tensioning. Our tensioner design can be seen below, where the belt is not yet tensioned.
+Having a tensioner governed by a screw and a nut was far more ideal, as it would allow for easier tensioning since it could be easily adjusted, and the high mechanical advantage offered by the screw and the nut allowed us more control over the belt tensioning. Our tensioner design can be seen below, where the belt is not yet tensioned.
             </p>
 
             <span class="image fit">
@@ -308,7 +339,7 @@
               </span>
 
               <p>
-                The design consisted of the pulleys being pulled inward by the tension of the belts, and the nut and bolt restraining them and dictating the belt tension. The dovetail rails restrain the tensioner laterally, preventing the bolt from widening its mounting hole or bending. For our tensioning needs, this was adequate, but the small PLA bolt segment connecting the bolt to the corner was starting to bend and deform, and the blue tensioner segment was also starting to rotate, since the tolerances were very loose. If we had more time, we would redesign those segments to be more robust. 
+The design consisted of the pulleys being pulled inward by the tension of the belts, and the nut and bolt restraining them and dictating the belt tension. The dovetail rails restrain the tensioner laterally, preventing the bolt from widening its mounting hole or bending. For our tensioning needs, this was adequate, but the small PLA bolt segment connecting the bolt to the corner was starting to bend and deform toward the center of the board, and the blue tensioner segment was also starting to rotate, since the dovetail parts had play between them. If we had more time, we would redesign these blue parts to be more robust for longer-term use.
               </p>
 
           </div>
@@ -346,7 +377,7 @@ We decided to use appropriately colored numbered squares to distinguish captured
               </span>
 
               <p>
-                To cut our big chessboard, we had to use a big laser-cutter. When performing test-cuts, we realized that only the big laser cutter did not properly process our file and rastered everything evenly, and all the numbers and icons were not visible. This caused us to have to split our file into two passes, which increased our raster time from an hour to over two hours. The result at the end was absolutely stunning, and can be seen below.
+                To cut our big chessboard, we had to use the big Babson Foundry. When performing test-cuts, we realized that only the big laser cutter did not properly process our file and rastered everything evenly, and all the numbers and icons were not visible. This caused us to have to split our file into two passes, which increased our raster time from an hour to over two hours. The result at the end was absolutely stunning, and can be seen below.
               </p>
 
               <span class="image fit">
@@ -392,7 +423,7 @@ We decided to use appropriately colored numbered squares to distinguish captured
             </header>
 
             <p>
-              To hit our goal of having a magical chessboard, we had to have side panels to conceal all the magic. Since we attached the board by hand, this caused us to have a slight rotation in the board. Also, we did not cut the board to be fully square, and the chessboard was not fully centered on the board. If we were to do this again, we would make sure to cut the board perfectly and to create jigs to mount the board perfectly, but because of our oversight, we had to create some unnecessarily complex side panels. To create our side panels, the only identical pieces were the side panels on the left and right, and every other piece had to be unique, due to our oversight. To create our flush side panels, we created a CAD assembly with mounting brackets. We then 3D printed all the brackets and laser-cut 1/8th inch black chipboard for our side panels. After doing so, we realized that we failed to account for the kerf of the laser cutter, and a small gap in the laser print sections revealed our bright pink 3D prints, ruining the magic. Our stretch goal of adding sensing to the board so we could detect true human movement would have required a lot more wiring than anticipated, so segments of the cover had to be redesigned and recut to account for this oversight. The CAD of the redesigned pieces can be seen below, along with a basic version of our gantry system:
+              To hit our goal of having a magical chessboard, we had to have side panels to conceal all the magic. Since we attached the board by hand, this caused us to have a slight rotation in the board. Also, we did not cut the board to be fully square, and the chessboard was not fully centered on the board. If we were to do this again, we would make sure to cut the board perfectly and to create jigs to mount the board perfectly, but because of our oversight, we had to create some unnecessarily complex side panels. To create our side panels, the only identical pieces were the side panels on the left and right, and every other piece had to be unique, due to our oversight. To create our flush side panels, we created a CAD assembly with mounting brackets. We then 3D printed all the brackets and laser-cut 1/8th inch black chipboard for our side panels. After doing so, we realized that we failed to account for the kerf of the laser cutter, and a small gap in the laser print sections revealed our bright pink 3D prints, ruining the magic. Our stretch goal of adding sensing to the board so we could detect true human movement would have required a lot more wiring than anticipated, so segments of the cover had to be redesigned and recut to account for this oversight. The CAD of the redesigned pieces can be seen below, along with a simplified version of our gantry system:
             </p>
             <span class="image fit">
                 <img
