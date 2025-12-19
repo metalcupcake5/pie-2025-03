@@ -3640,7 +3640,7 @@ body,
   font-size: 16pt;              
   font-weight: 300;
   line-height: 1.65em;
-  color: rgba(255,255,255,.78); 
+  color: rgb(242, 12, 12); 
 }
 
 #summary h1,
@@ -3654,7 +3654,7 @@ body,
 }
 
 #summary header.major:after{
-  background: rgba(255,255,255,.22);
+  background: rgb(218, 15, 15);
 }
 
 #summary header.major{
@@ -3670,7 +3670,7 @@ body,
 #summary p,
 #summary header p,
 #summary a{
-  color: rgba(255,255,255,.78) !important;
+  color: rgba(253, 248, 248, 0.78) !important;
 }
 
 #summary h1, #summary h2, #summary h3, #summary h4, #summary h5, #summary h6,
@@ -3679,7 +3679,7 @@ body,
 }
 
 #summary header.major:after{
-  background: rgba(255,255,255,.22) !important;
+  background: rgb(225, 217, 217) !important;
 }
 
 #summary{
@@ -3769,7 +3769,7 @@ body,
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: rgba(10, 10, 20, 0.95);
+	background: rgb(23, 20, 20);
 	z-index: 1000;
 }
 
@@ -3798,7 +3798,7 @@ body,
 	font-size: 1rem;
 	padding: 0rem 0.5rem;
 	text-transform: none;    
-	letter-spacing: 0.06em;  
+	letter-spacing: 0.06em; 
 }
 
 
@@ -3811,7 +3811,7 @@ body {
 	justify-content: center;     
 	text-align: center;
 	padding: 4em 2em;            
-	min-height: calc(100vh - 3.5rem); 
+	min-height: calc(100vh - 3.5rem);
 }
 
 #header .inner {
@@ -3821,7 +3821,7 @@ body {
 }
 
 #top-nav a {
-  border-bottom: none;             
+  border-bottom: none;           
 }
 
 #top-nav .button.small {
@@ -3843,7 +3843,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(10, 10, 20, 0.95);
+  background: rgba(0, 0, 0, 0.585);
   z-index: 1000;
 }
 
@@ -3872,7 +3872,7 @@ body {
 #top-nav .brand span {
   font-weight: 400;
   letter-spacing: 0.08em;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
@@ -3896,7 +3896,7 @@ body {
   width: 20%;
   height: auto;
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 /* Final override: ensure a single static header image with no overlays */
