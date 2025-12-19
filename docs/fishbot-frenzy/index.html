@@ -753,55 +753,249 @@
                     </div>
 
                     <div class="phase-content" id="phase-4">
-                        <h3>Climate Impact Research</h3>
+                        <h3>Final Mile</h3>
                         <p>
-                            Investigating how climate change affects ocean
-                            ecosystems, from acidification and warming to sea
-                            level rise. Our research provides critical data for
-                            climate models and informs global policy decisions
-                            on ocean conservation.
+                            Like many engineering projects with a deadline, we
+                            got the most work done during the final three weeks
+                            of our project! Here's the breakdown on how we
+                            flat-out sprinted through the rest of this game.
                         </p>
+                        <br />
 
-                        <div class="phase-stats">
-                            <div class="stat-item">
-                                <span class="number">156</span>
-                                <span class="label">Monitoring Sites</span>
+                        <h4>Mechanical</h4>
+                        <p>
+                            The tank was mostly done at this point; the scotch
+                            yoke, base, motors, and associated supports were all
+                            placed and dimensioned in CAD. The main components
+                            added during the final segment were the dome cap, a
+                            third layer of railings, and the 3D-printed obstacle
+                            mounts for the motors and scotch yoke.
+                        </p>
+                        <br />
+                        <div class="display">
+                            <img src="media/img/phase4/phase4_finaltank.png" />
+                            <p>Final CAD Of the tank.</p>
+                        </div>
+                        <p>
+                            However, it still wasn't finished enough to be cut
+                            and assembled immediately. The bottom layer of the
+                            railing design changed after testing determined that
+                            the fishbots would get stuck on sharp corners; a
+                            third layer was added to increase support and
+                            adhesive contact to the struts, and then altered
+                            along with the second layer in response to the
+                            scorebox location and design.
+                        </p>
+                        <br />
+                        <p>
+                            The 3D prints required some level of iteration as
+                            well. They were designed with pressfitting in mind,
+                            as they would need to be removed to slide the main
+                            platform off, and as such they required testing
+                            until the tolerances were acceptable. Likewise, the
+                            struts were originally meant to be made of clear
+                            acrylic for aesthetic purposes, and so was made to
+                            be pressfit. Difficulties with laser printing, tight
+                            tolerancing, and lack of stock meant that we were
+                            forced to use plywood as a replacement in the end.
+                        </p>
+                        <br />
+                        <p>
+                            For the scorebox, a large concern was our inability
+                            to control the orientation that the fishbots fell.
+                            An initial concept involved preventing them from
+                            flipping by designing the platform in a specific
+                            manner, such as through a ramp or a vertical tunnel.
+                        </p>
+                        <br />
+
+                        <div class="display">
+                            <img src="/media/img/phase4/phase4_chomp_v3.png" />
+                            <p>
+                                Initial scorebox and tunnel design (Chomp v3).
+                            </p>
+                        </div>
+                        <p>
+                            Unfortunately, this method did not succeed, and we
+                            attempted to instead design the fishbots to
+                            consistently land upright. With this in mind, the
+                            platform simplified drastically and became much more
+                            focused on funneling the fishbots out into the
+                            tunnel.
+                        </p>
+                        <br />
+                        <div class="display">
+                            <img src="media/img/phase4/phase4_chomp_v4.png" />
+                            <p>
+                                Partially finished assembly of an updated
+                                scorebox (Chomp v4).
+                            </p>
+                        </div>
+                        <p>
+                            This design, however, was also problematic; the
+                            assembly was never completed in favor of being able
+                            to test the railing and platform faster, and it was
+                            unexpected when the fishbots were caught on the
+                            bottom edges of spur gears and the fish jaws.
+                        </p>
+                        <br />
+                        <p>
+                            Finally, due to time constraints, we resorted to
+                            removing the "eating" mechanism.
+                        </p>
+                        <br />
+                        <div class="display">
+                            <div class="horizontal-display">
+                                <img
+                                    src="/media/img/phase4/phase4_chomp_v5.png"
+                                />
+                                <img
+                                    src="/media/img/phase4/phase4_scorebox.JPG"
+                                />
                             </div>
-                            <div class="stat-item">
-                                <span class="number">7.2°C</span>
-                                <span class="label">Max Temp Rise</span>
+                            <p>
+                                A completed assembly of the final scorebox
+                                (Chomp v5) in CAD and reality.
+                            </p>
+                        </div>
+                        <p>
+                            Throughout all of this design and redesign, we were
+                            also fabricating parts. The main platform was cut
+                            with the Shopbot CNC Router with little issue. We
+                            had significant issues with cutting with the laser
+                            cutters, where there were errors with speed levels
+                            and poor tolerancing due to settings and overuse of
+                            the shop spaces. Pieces that didn't cut all the way
+                            through were difficult to retrieve and happened
+                            often enough for it to be a time issue.
+                        </p>
+                        <div class="display">
+                            <img
+                                src="/media/img/phase4/phase4_shopbot.jpg"
+                                style="max-height: 20em"
+                            />
+                            <p>The main platform after being Shopbotted.</p>
+                        </div>
+                        <p>
+                            This last phase included two fishbot shell versions,
+                            each of which had multiple subiterations. Shell 7
+                            was a PLA-core bot with TPU legs designed to hold
+                            two 1.5V button cell batteries.
+                        </p>
+                        <br />
+                        <div class="horizontal-display">
+                            <div class="display">
+                                <img
+                                    src="/media/img/phase4/phase4_sketch_fishbot.jpg"
+                                    style="height: 15em"
+                                />
+                                <p>
+                                    Sketches for the PLA shell and dimensions.
+                                </p>
                             </div>
-                            <div class="stat-item">
-                                <span class="number">-0.4</span>
-                                <span class="label">pH Change</span>
+                            <div class="display">
+                                <img
+                                    src="/media/img/phase4/phase4_shell7.png"
+                                    style="height: 15em"
+                                />
+                                <p>
+                                    The assembled PLA shell #7 and TPU legs,
+                                    along with the motor and switch.
+                                </p>
                             </div>
                         </div>
-
-                        <div class="phase-details">
-                            <div class="detail-card">
-                                <h4>Ocean Acidification</h4>
-                                <p>
-                                    Monitoring pH changes and their effects on
-                                    calcifying organisms like corals, mollusks,
-                                    and marine plankton.
-                                </p>
-                            </div>
-                            <div class="detail-card">
-                                <h4>Thermal Stress</h4>
-                                <p>
-                                    Studying how rising temperatures affect
-                                    marine metabolism, reproduction, and species
-                                    distribution patterns.
-                                </p>
-                            </div>
-                            <div class="detail-card">
-                                <h4>Sea Level Impact</h4>
-                                <p>
-                                    Assessing coastal ecosystem changes and
-                                    adaptation strategies for rising sea levels
-                                    and increased storm intensity.
-                                </p>
-                            </div>
+                        <p>
+                            However, this shell resulted in a fishbot that was
+                            too tall. While it was high enough to be read by the
+                            RFID sensor, it would get stuck on the ¼" plywood
+                            railings. The next iteration involved lowering the
+                            face of the fishbot and adding a pointed tip to turn
+                            it away from walls instead of running directly into
+                            them.
+                        </p>
+                        <br />
+                        <div class="display">
+                            <img
+                                src="/media/img/phase4/phase4_shell7_pla.png"
+                                style="height: 15em"
+                            />
+                            <p>PLA shell #7b</p>
+                        </div>
+                        <p>
+                            The other benefit of shell #7b is that it has a
+                            lower center of mass. We had hoped this would
+                            encourage it to land feet-first more often. It did
+                            not. In order to solve the problem of orientation
+                            when landing, a different idea was devised: making
+                            the fishbots double-sided.
+                        </p>
+                        <br />
+                        <div class="display">
+                            <img
+                                src="/media/img/phase4/phase4_shell8.png"
+                                style="height: 15em"
+                            />
+                            <img
+                                src="/media/img/phase4/phase4_fishbot_side.JPG"
+                                style="height: 15em"
+                            />
+                            <p>(top) Fish 8 CAD. (bottom) Fish 8 assembled.</p>
+                        </div>
+                        <p>
+                            The TPU legs of Fishbot 8 clip on to the center and
+                            have legs on both sides, allowing the fish to move
+                            regardless of which side it lands on.
+                        </p>
+                        <br />
+                        <h4>Electrical and Software</h4>
+                        <ul>
+                            <li>
+                                circuitry finalization
+                                <ul>
+                                    <li>
+                                        all prototype circuits were converted
+                                        into soldered perfboard ones
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                battery power
+                                <ul>
+                                    <li>
+                                        each arduino was tested to ensure it was
+                                        able to be powered from a 9V battery
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                7 segment displays
+                                <ul>
+                                    <li>
+                                        a second digit was added to each
+                                        scorebox for a total of two digits per
+                                        scorebox
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                RFID testing
+                                <ul>
+                                    <li>
+                                        final tests were performed to double
+                                        check the range of the RFID sensor - we
+                                        found it could reliably detect chips
+                                        from 2-3cm away
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br />
+                        <div class="display">
+                            <img
+                                src="/media/img/phase4/phase4_wiring.JPG"
+                                style="height: 30em"
+                            />
+                            <p>A final wired scorebox circuit</p>
                         </div>
                     </div>
                 </div>

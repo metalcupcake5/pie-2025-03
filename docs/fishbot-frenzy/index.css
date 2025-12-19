@@ -1579,6 +1579,10 @@ footer::before {
     overflow: hidden;
 }
 
+li ul {
+    margin-left: 1.5em;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
